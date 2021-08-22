@@ -1,2 +1,2 @@
-# Prof-Course-Rating-System
-Group Project: Prof&amp;Course Rating System.
+# Professor-Course-Rating-Application
+Group Project: Prof&amp;Course Rating Application.
