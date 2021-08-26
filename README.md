@@ -40,14 +40,14 @@ Proposal见: docs/Proposal.md
 Proposal的中文内容在第一次会议纪要里有留档，建议大家都过一遍中文内容，了解整个应用。
 
 昆哥的任务：
-- Brief Description of Current Processes下的：User Register & Login、Professor Entry Management、Course Entry Management
-- Functional Specifications下的： User Register
-、User Login、Professor Entry Creation
+- Brief Description of Current Processes下的：`User Register & Login`、`Professor Entry Management`、`Course Entry Management`
+- Functional Specifications下的： `User Register`
+、`User Login`、`Professor Entry Creation`
 
 
 宇哥的任务：
-- Brief Description of Current Processes下的：Comments & Rates (C&R) Management、Entries View
-- Functional Specifications下的：Course Entry Creation、Comment and Rate (C&R) on Professor & Course
+- Brief Description of Current Processes下的：`Comments & Rates (C&R) Management`、`Entries View`
+- Functional Specifications下的：`Course Entry Creation`、`Comment and Rate (C&R) on Professor & Course`
 
 **DDL: 2021年8月30日 周日**
 
