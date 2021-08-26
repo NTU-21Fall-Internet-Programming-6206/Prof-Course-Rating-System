@@ -3,6 +3,10 @@
 - [Project Scenario – Professor & Course Rating Application (PCRA)](#project-scenario--professor--course-rating-application-pcra)
   - [Background](#background)
   - [Brief Description of Current Processes](#brief-description-of-current-processes)
+    - [User Management](#user-management)
+    - [Professor & Course Entries Management](#professor--course-entries-management)
+    - [Comments & Rates (C&R) Management](#comments--rates-cr-management)
+  - [Functional Specifications](#functional-specifications)
     - [User Register](#user-register)
     - [User Login](#user-login)
     - [Professor Entry Creation](#professor-entry-creation)
@@ -19,7 +23,20 @@ The Professor & Course Rating System (PCRA) provide a platform where students ca
 
 The main users of PCRA are Students.
 
+
 ## Brief Description of Current Processes
+
+### User Management
+
+- Students can register their own account in PCRA. 
+- The account name should be 
+
+### Professor & Course Entries Management
+
+### Comments & Rates (C&R) Management
+
+
+## Functional Specifications 
 
 ### User Register
 
