@@ -83,7 +83,7 @@ The main users of PCRA are Students and Application Administrator (AA).
 
 1. This module is used by students.
 2. Enable the adding of courses' entries：
-   a. A typical course entry consists of:
+   - A typical course entry consists of:
       - Course ID
       - Professor Name
       - Course Name
@@ -92,15 +92,15 @@ The main users of PCRA are Students and Application Administrator (AA).
 
 1. This module is used by students.
 2. Enable students to comment and rate on both professor and course.
-   a. A typical C&R consists of:
+   - A typical C&R consists of:
       - Rating Score (e.g. 4.5 out of 5)
       - Comment Content
 3. Assume that the following information is available in the database.
-   - a. C&R on professors:
+   - C&R on professors:
       - Professor Name
       - Rating Score
       - Comment Content
-   - b. C&R on courses：
+   - C&R on courses：
       - Course ID
       - Rating Score
       - Comment Content
