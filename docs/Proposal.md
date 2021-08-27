@@ -43,17 +43,17 @@ The main users of PCRA are Students and Application Administrator (AA).
 
 ### Comments & Rates (C&R) Management
 
-- 学生可以针对教授发布匿名C&R。
-- 学生可以针对课程发布匿名C&R。
-- 学生可以修改或删除自己发布的任何C&R
+- Students can choose a professor and post the C&R on this professor anonymously.
+- Students can choose a course and post the C&R on this course anonymously.
+- Students can modify or delete any C&R posted by themselves.
 
 ### Entries View
 
-- 学生可以在教授库中找到某个教授，进入该教授的详情页，查看详情并浏览教授的C&R
-- 学生可以在教授详情页看到教授教的课程，并进入课程详情页浏览课程的C&R
-- 学生也可以在课程库中直接找到课程，进入课程详情页，浏览课程的C&R
+- Students can find a professor in the professor library, access that professor's details webpage, view the details and browse the C&Rs on that professor.
+- Students can find which courses were taught by the professor in that professor's details webpage, access the course's details webpage and browse the C&Rs on that course.
+- Students can find a course in the course library, access that course's details webpage, view the details and browse C&Rs on that course.
 
-## Functional Specifications 
+## Functional Specifications
 
 ### User Register
 
@@ -61,7 +61,7 @@ The main users of PCRA are Students and Application Administrator (AA).
 2. 注册用户需要提供：
    - User Name
    - Email Address
-   - Password 
+   - Password
 
 ### User Login
 
@@ -79,25 +79,28 @@ The main users of PCRA are Students and Application Administrator (AA).
    - Title
    - Email
 
-### Course Entry Creation 
-1. 学生使用此功能。
-2. 创建课程条目需要提供：
-   - Course ID
-   - Professor Name
-   - Course Name
+### Course Entry Creation
 
+1. This module is used by students.
+2. Enable the adding of courses' entries：
+   a. A typical course entry consists of:
+      - Course ID
+      - Professor Name
+      - Course Name
 
 ### Comment and Rate (C&R) on Professor & Course
 
-1. 学生使用此功能。
-2. 无论是对教授C&R还是对课程C&R，学生创建C&R需要提供：
-   - Rating Score (e.g. 4.5 out of 5)
-   - Comment Content
-3. 针对教授的C&R在数据库中应当有这些属性：
-   - Professor Name
-   - Rating Score
-   - Comment Content
-4. 针对课程的C&R在数据库中应当有这些属性：
-   - Course ID
-   - Rating Score
-   - Comment Content
+1. This module is used by students.
+2. Enable students to comment and rate on both professor and course.
+   a. A typical C&R consists of:
+      - Rating Score (e.g. 4.5 out of 5)
+      - Comment Content
+3. Assume that the following information is available in the database.
+   a. C&R on professors:
+      - Professor Name
+      - Rating Score
+      - Comment Content
+   b. C&R on courses：
+      - Course ID
+      - Rating Score
+      - Comment Content
