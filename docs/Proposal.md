@@ -28,18 +28,18 @@ The main users of PCRA are Students and Application Administrator (AA).
 
 ### User Register & Login
 
-- 学生可以进行用户注册
-- 已注册的用户可以用用户名和密码登录PCRA
+- Students can register as a user by initializing the username, email address and password.
+- The successfully registered user will be authorized to sign in PCRA with the corresponding username/email address and password.
 
 ### Professor Entry Management
 
-- 由AA从学院网站获取教授信息，录入PCRA后台
-- 学生不能自行创建、修改或删除Professor Entry
+- AAs are responsible for data entry of the professors' information from the school website.
+- Students have no authority to create, modify or delete Professor Entry.
 
 ### Course Entry Management
 
-- 学生可以自行创建Course Entry。学生创建的Course的任课老师必须是Professor Entries中已有的教授
-- 学生不能自行删除Course Entry。这样是为了保护条目积累的评论。
+- Students are allowed to create Course Entry with the corresponding course professor name.
+- In order to reserve C&Rs of a Course Entry, students have no authority to delete it.
 
 ### Comments & Rates (C&R) Management
 
@@ -57,24 +57,24 @@ The main users of PCRA are Students and Application Administrator (AA).
 
 ### User Register
 
-1. 学生使用此功能。
-2. 注册用户需要提供：
-   - User Name
+1. Students available.
+2. When registering a user, the information below is necessary：
+   - Username
    - Email Address
    - Password
 
 ### User Login
 
-1. 学生使用此功能。
-2. 登录需要提供：
-   - User Name
+1. Students available.
+2. When signing in, the information below is required：
+   - Username
    - Password
 
 ### Professor Entry Creation
 
-1. AA使用此功能
-2. AA使用爬虫技术爬取学院官方网站的Faculty介绍，存入数据库
-3. 一个教授条目包括：
+1. Only for AAs.
+2. AAs are responsible to store professors' information scrawled from the faculty page on the school website into databases.
+3. A professor entry consists of：
    - Professor Name
    - Title
    - Email
