@@ -96,11 +96,11 @@ The main users of PCRA are Students and Application Administrator (AA).
       - Rating Score (e.g. 4.5 out of 5)
       - Comment Content
 3. Assume that the following information is available in the database.
-   a. C&R on professors:
+   - a. C&R on professors:
       - Professor Name
       - Rating Score
       - Comment Content
-   b. C&R on courses：
+   - b. C&R on courses：
       - Course ID
       - Rating Score
       - Comment Content
