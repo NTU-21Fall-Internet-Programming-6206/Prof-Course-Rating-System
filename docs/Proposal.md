@@ -1,8 +1,8 @@
 # Project Scenario – Professor & Course Rating Application (PCRA)
 
-> **For Better Layout, Please This Proposal's Webpage**: [https://ntu-21fall-internet-programming-6206.github.io/Professor-Course-Rating-Applicaion/docs/Proposal](https://ntu-21fall-internet-programming-6206.github.io/Professor-Course-Rating-Applicaion/docs/Proposal)
+> **For Better Layout, Please Visit This Proposal's Webpage**: [https://ntu-21fall-internet-programming-6206.github.io/Professor-Course-Rating-Applicaion/docs/Proposal](https://ntu-21fall-internet-programming-6206.github.io/Professor-Course-Rating-Applicaion/docs/Proposal)
 
-> **This Project's Github Repository**: [https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/blob/main/docs/Proposal.md](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/blob/main/docs/Proposal.md)
+> **This Project's Github Repository**: [https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion)
 
 - [Project Scenario – Professor & Course Rating Application (PCRA)](#project-scenario--professor--course-rating-application-pcra)
   - [Background](#background)
