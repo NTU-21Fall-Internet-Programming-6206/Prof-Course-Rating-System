@@ -1,19 +1,22 @@
 # Project Scenario – Professor & Course Rating Application (PCRA)
 
+> **This Proposal's Webpage**: [https://ntu-21fall-internet-programming-6206.github.io/Professor-Course-Rating-Applicaion/docs/Proposal](https://ntu-21fall-internet-programming-6206.github.io/Professor-Course-Rating-Applicaion/docs/Proposal)</br>
+> **This Project's Github Repository**: [https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/blob/main/docs/Proposal.md](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/blob/main/docs/Proposal.md)
+
 - [Project Scenario – Professor & Course Rating Application (PCRA)](#project-scenario--professor--course-rating-application-pcra)
   - [Background](#background)
   - [Brief Description of Current Processes](#brief-description-of-current-processes)
-    - [User Register & Login](#user-register--login)
-    - [Professor Entry Management](#professor-entry-management)
-    - [Course Entry Management](#course-entry-management)
-    - [Comments & Rates (C&R) Management](#comments--rates-cr-management)
-    - [Entries View](#entries-view)
+    - [1. User Register & Login](#1-user-register--login)
+    - [2. Professor Entry Management](#2-professor-entry-management)
+    - [3. Course Entry Management](#3-course-entry-management)
+    - [4. Comments & Rates (C&R) Management](#4-comments--rates-cr-management)
+    - [5. Entries View](#5-entries-view)
   - [Functional Specifications](#functional-specifications)
-    - [User Register](#user-register)
-    - [User Login](#user-login)
-    - [Professor Entry Creation](#professor-entry-creation)
-    - [Course Entry Creation](#course-entry-creation)
-    - [Comment and Rate (C&R) on Professor & Course](#comment-and-rate-cr-on-professor--course)
+    - [1. User Register](#1-user-register)
+    - [2. User Login](#2-user-login)
+    - [3. Professor Entry Creation](#3-professor-entry-creation)
+    - [4. Course Entry Creation](#4-course-entry-creation)
+    - [5. Comment and Rate (C&R) on Professor & Course](#5-comment-and-rate-cr-on-professor--course)
 
 ## Background
 
@@ -26,28 +29,28 @@ The main users of *PCRA* are *Students* and *Application Administrator (AA)*.
 
 ## Brief Description of Current Processes
 
-### User Register & Login
+### 1. User Register & Login
 
 - *Students* can register as a user by initializing the username, email address and password.
 - The successfully registered user will be authorized to sign in *PCRA* with the corresponding username/email address and password.
 
-### Professor Entry Management
+### 2. Professor Entry Management
 
 - AAs are responsible for data entry of the professors' information from the school website.
 - Students have no authority to create, modify or delete Professor Entry.
 
-### Course Entry Management
+### 3. Course Entry Management
 
 - Students are allowed to create Course Entry with the corresponding course professor name.
 - In order to reserve C&Rs of a Course Entry, students have no authority to delete it.
 
-### Comments & Rates (C&R) Management
+### 4. Comments & Rates (C&R) Management
 
 - Students can choose a professor and post the C&R on this professor anonymously.
 - Students can choose a course and post the C&R on this course anonymously.
 - Students can modify or delete any C&R posted by themselves.
 
-### Entries View
+### 5. Entries View
 
 - Students can find a professor in the professor library, access that professor's details webpage, view the details and browse the C&Rs on that professor.
 - Students can find which courses were taught by the professor in that professor's details webpage, access the course's details webpage and browse the C&Rs on that course.
@@ -55,7 +58,7 @@ The main users of *PCRA* are *Students* and *Application Administrator (AA)*.
 
 ## Functional Specifications
 
-### User Register
+### 1. User Register
 
 1. Students available.
 2. When registering a user, the information below is necessary：
@@ -63,14 +66,14 @@ The main users of *PCRA* are *Students* and *Application Administrator (AA)*.
    - Email Address
    - Password
 
-### User Login
+### 2. User Login
 
 1. Students available.
 2. When signing in, the information below is required：
    - Username
    - Password
 
-### Professor Entry Creation
+### 3. Professor Entry Creation
 
 1. Only for AAs.
 2. AAs are responsible to store professors' information scrawled from the faculty page on the school website into databases.
@@ -79,7 +82,7 @@ The main users of *PCRA* are *Students* and *Application Administrator (AA)*.
    - Title
    - Email
 
-### Course Entry Creation
+### 4. Course Entry Creation
 
 1. This module is used by students.
 2. Enable the adding of courses' entries：
@@ -88,7 +91,7 @@ The main users of *PCRA* are *Students* and *Application Administrator (AA)*.
       - Professor Name
       - Course Name
 
-### Comment and Rate (C&R) on Professor & Course
+### 5. Comment and Rate (C&R) on Professor & Course
 
 1. This module is used by students.
 2. Enable students to comment and rate on both professor and course.
