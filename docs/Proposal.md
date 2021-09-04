@@ -101,10 +101,15 @@ The main users of PCRA are Students and Application Administrator (AA).
       - Comment Content
 3. Assume that the following information is available in the database.
    - C&R on professors:
+      - Auto Increment ID
       - Professor Name
+      - Rater Name (Should be Student Username)
       - Rating Score
       - Comment Content
    - C&R on courses：
+      - Auto Increment ID
       - Course ID
+      - Professor Name
+      - Rater Name (Should be Student Username)
       - Rating Score
       - Comment Content
