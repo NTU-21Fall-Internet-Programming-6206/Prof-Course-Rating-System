@@ -34,7 +34,13 @@ All group members are Chinese. For Better Reading, docs for internal reading wil
 
 数据表已定义好，数据表定义脚本见[./codes/Database/DDL.sql](./codes/Database/DDL.sql)，数据库ER图见[./codes/Database/er_diagram.jpeg](./codes/Database/er_diagram.jpeg)。
 
-根据数据表定义和Proposal的中文留档
+需要完成：API文档[./codes/API_doc.md](./codes/API_doc.md)
+
+参考数据表定义和[./codes/API_doc.md](./codes/API_doc.md)中已写好的接口文档，完成整个API文档。
+
+宇哥的任务：Course、对教授的C&R
+
+昆哥的任务：对课程的C&R
 
 
 ## 2021.08.26任务安排

@@ -147,6 +147,8 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 ### 获取Course信息
 
+> 用可选参数实现：获取特定course信息、获取某个教授对应的全部course信息
+
 
 
 
