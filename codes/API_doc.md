@@ -13,42 +13,42 @@ POST请求，用json将参数放在请求体Body里。所有创建请求用POST�
 DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 - [Professor-Course-Rating-Application API文档](#professor-course-rating-application-api文档)
-  - [全局错误码](#全局错误码)
-  - [Student](#student)
-    - [Student注册](#student注册)
-    - [Student登录](#student登录)
-  - [Professor](#professor)
-    - [获取Professor信息](#获取professor信息)
-  - [Course](#course)
-    - [创建Course](#创建course)
-    - [获取Course信息](#获取course信息)
-  - [对教授的C&R](#对教授的cr)
-    - [创建对教授的C&R](#创建对教授的cr)
-    - [获取对教授的C&R](#获取对教授的cr)
-    - [删除对教授的C&R](#删除对教授的cr)
-  - [对课程的C&R](#对课程的cr)
-    - [创建对课程的C&R](#创建对课程的cr)
-    - [获取对课程的C&R](#获取对课程的cr)
-    - [删除对课程的C&R](#删除对课程的cr)
+  - [一、全局错误码](#一全局错误码)
+  - [二、Student](#二student)
+    - [1. Student注册](#1-student注册)
+    - [2. Student登录](#2-student登录)
+  - [三、Professor](#三professor)
+    - [1. 获取Professor信息](#1-获取professor信息)
+  - [四、Course](#四course)
+    - [1. 创建Course](#1-创建course)
+    - [2. 获取Course信息](#2-获取course信息)
+  - [五、对教授的C&R](#五对教授的cr)
+    - [1. 创建对教授的C&R](#1-创建对教授的cr)
+    - [2. 获取对教授的C&R](#2-获取对教授的cr)
+    - [3. 删除对教授的C&R](#3-删除对教授的cr)
+  - [六、对课程的C&R](#六对课程的cr)
+    - [1. 创建对课程的C&R](#1-创建对课程的cr)
+    - [2. 获取对课程的C&R](#2-获取对课程的cr)
+    - [3. 删除对课程的C&R](#3-删除对课程的cr)
 
-## 全局错误码
+## 一、全局错误码
 
 | 错误码 | 错误解释     |
 |--------|----------|
 | 404   | 接口不存在 |
 | 500   | 服务器错误     |
 
-## Student
+## 二、Student
 
-### Student注册
+### 1. Student注册
 
-**请求URL：** 
+请求URL： 
 - `http://127.0.0.1:8585/student/register`
   
-**请求方式：**
+请求方式：
 - POST 
 
-**参数：** 
+参数： 
 
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
@@ -56,41 +56,41 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 |password |是  |string |密码    |
 |email_address     |是  |string | 邮箱地址|
 
- **返回示例**
+ 返回示例
 ```json
   {
     "info": "Success",
   }
 ```
- **返回参数说明** 
+ 返回参数说明 
 
 |参数名|类型|说明|
 |:-----  |:-----|-----                           |
 |info |string   |"Success"表示注册成功；若失败，为失败详细说明。  |
 
-### Student登录
+### 2. Student登录
 
-**请求URL：** 
+请求URL： 
 - `http://127.0.0.1:8585/student/login`
   
-**请求方式：**
+请求方式：
 - POST 
 
-**参数：** 
+参数： 
 
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
 |username |是  |string |用户名   |
 |password |是  |string |密码    |
 
- **返回示例**
+ 返回示例
 ```json
   {
     "info": "Success",
     "token": "b6aaed9f3f669su8b6aaed9f3f669su8"
   }
 ```
- **返回参数说明** 
+ 返回参数说明 
 
 |参数名|类型|说明|
 |:-----  |:-----|-----                           |
@@ -98,24 +98,24 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 |token |string   |若登录成功，返回含32个字符的字符串作为token；若失败，为空字符串。|
 
 
-## Professor
+## 三、Professor
 
-### 获取Professor信息
+### 1. 获取Professor信息
 
-**请求URL：** 
+请求URL： 
 - `http://127.0.0.1:8585/professor`
   
-**请求方式：**
+请求方式：
 - GET 
 
-**参数：** 
+参数： 
 
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
 |professor_name |否  |string |教授名。若有该参数，返回该教授的信息；若无此参数，返回所有教授的信息   |
 
 
- **返回示例**
+ 返回示例
 ```json
   {
     "professor_list": [
@@ -132,7 +132,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
     ]
   }
 ```
- **返回参数说明** 
+ 返回参数说明 
 
 |参数名|类型|说明|
 |:-----  |:-----|-----|
@@ -141,33 +141,33 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 
 
-## Course
+## 四、Course
 
-### 创建Course
+### 1. 创建Course
 
-### 获取Course信息
+### 2. 获取Course信息
 
 > 用可选参数实现：获取特定course信息、获取某个教授对应的全部course信息
 
 
 
 
-## 对教授的C&R
+## 五、对教授的C&R
 
-### 创建对教授的C&R
+### 1. 创建对教授的C&R
 
-### 获取对教授的C&R
+### 2. 获取对教授的C&R
 
-### 删除对教授的C&R
-
-
+### 3. 删除对教授的C&R
 
 
-## 对课程的C&R
 
-### 创建对课程的C&R
 
-### 获取对课程的C&R
+## 六、对课程的C&R
 
-### 删除对课程的C&R
+### 1. 创建对课程的C&R
+
+### 2. 获取对课程的C&R
+
+### 3. 删除对课程的C&R
 
