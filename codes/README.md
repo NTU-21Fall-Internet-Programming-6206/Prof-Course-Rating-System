@@ -11,3 +11,7 @@ All backend codes are saved in Backend directory. E.g. Java codes.
 ## Database
 
 All Database codes are saved in Database directory. E.g. SQL script.
+
+## API_doc.md
+
+RESTful APIs' doc.

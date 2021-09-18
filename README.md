@@ -10,6 +10,7 @@ All group members are Chinese. For Better Reading, docs for internal reading wil
   - [目录结构说明](#目录结构说明)
     - [1. docs目录](#1-docs目录)
     - [2. codes目录](#2-codes目录)
+  - [2021.09.18任务安排](#20210918任务安排)
   - [2021.08.26任务安排](#20210826任务安排)
     - [1. 完成Proposal](#1-完成proposal)
 
@@ -27,6 +28,13 @@ All group members are Chinese. For Better Reading, docs for internal reading wil
 ### 2. codes目录
 
 所有代码工程会保存在此目录。
+
+
+## 2021.09.18任务安排
+
+数据表已定义好，数据表定义脚本见[./codes/Database/DDL.sql](./codes/Database/DDL.sql)，数据库ER图见[./codes/Database/er_diagram.jpeg](./codes/Database/er_diagram.jpeg)。
+
+根据数据表定义和Proposal的中文留档
 
 
 ## 2021.08.26任务安排
