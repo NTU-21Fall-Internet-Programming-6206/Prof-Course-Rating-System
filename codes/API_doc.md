@@ -138,30 +138,188 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 |:-----  |:-----|-----|
 |professor_list |list   |其中每个元素是单个教授的信息。|
 
-
-
-
 ## 四、Course
 
 ### 1. 创建Course
+
+请求URL:
+
+- `http://127.0.0.1:8585/course/add`
+  
+请求方式：
+
+- POST
+
+参数:
+
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|professor_name |是  |string |教授名   |
+|course_name |是  |string |课程名    |
+
+ 返回示例:
+
+```json
+  {
+    "info": "Success",
+  }
+```
+
+ 返回参数说明:
+
+|参数名|类型|说明|
+|:-----  |:-----|-----                           |
+|info |string   |"Success"表示创建；若失败，为失败详细说明。  |
 
 ### 2. 获取Course信息
 
 > 用可选参数实现：获取全部course信息、获取某个教授对应的全部course信息、获取某一个特定course信息
 
+请求URL:
 
+- `http://127.0.0.1:8585/course`
+  
+请求方式：
 
+- GET
+
+参数:
+
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|course_name |否  |string |课程名。若有该参数，返回该课程的信息；若无此参数，返回所有课程的信息   |
+
+ 返回示例
+
+```json
+  {
+    "course_list": [
+      {
+        "course_name": "course_1",
+        "professor_name": "professor_1"
+      }, 
+      {
+        "course_name": "course2_2",
+        "professor_name": "professor_2"
+      },
+    ]
+  }
+```
+
+ 返回参数说明
+
+|参数名|类型|说明|
+|:-----  |:-----|-----|
+|course_list |list   |其中每个元素是单个课程的信息。|
 
 ## 五、对教授的C&R
 
 ### 1. 创建对教授的C&R
 
+请求URL:
+
+- `http://127.0.0.1:8585/professor-CR/add`
+  
+请求方式：
+
+- POST
+
+参数:
+
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|professor_name |是  |string |教授名   |
+|username |是  |string |用户名    |
+|rate     |是  |integer | 评分|
+|comment     |是  |string | 评价|
+
+ 返回示例
+
+```json
+  {
+    "info": "Success",
+  }
+```
+
+ 返回参数说明
+
+|参数名|类型|说明|
+|:-----  |:-----|-----                           |
+|info |string   |"Success"表示创建成功；若失败，为失败详细说明。  |
+
 ### 2. 获取对教授的C&R
+
+请求URL:
+
+- `http://127.0.0.1:8585/professor_CR`
+  
+请求方式：
+
+- GET
+
+参数:
+
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|professor_name |否  |string |教授名。若有该参数，返回该教授的C&R；若无此参数，返回所有教授的C&R   |
+
+ 返回示例
+
+```json
+  {
+    "professor_cr_list": [
+      {
+        "professor_name": "professor_1",
+        "username": "abc123", 
+        "rate": 3,
+        "comment": "boring"
+      }, 
+      {
+        "professor_name": "professor_2",
+        "username": "jojo123", 
+        "rate": 2,
+        "comment": "great"
+      },
+    ]
+  }
+```
+
+ 返回参数说明
+
+|参数名|类型|说明|
+|:-----  |:-----|-----|
+|professor_cr_list |list   |其中每个元素是单个教授的C&R。|
 
 ### 3. 删除对教授的C&R
 
+请求URL:
 
+- `http://127.0.0.1:8585/professor`
+  
+请求方式：
 
+- DELETE
+
+参数:
+
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|professor_name |是  |string |教授名   |
+|username |是  |string |用户名    |
+
+ 返回示例
+
+ ```json
+  {
+    "info": "Success",
+  }
+```
+
+ 返回参数说明
+
+|参数名|类型|说明|
+|:-----  |:-----|-----                           |
+|info |string   |"Success"表示删除成功；若失败，为失败详细说明。  |
 
 ## 六、对课程的C&R
 
