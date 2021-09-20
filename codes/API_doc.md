@@ -256,8 +256,13 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 请求URL:
 
+<<<<<<< HEAD
 - `http://127.0.0.1:8585/professor_CR`
 
+=======
+- `http://127.0.0.1:8585/professor-CR`
+  
+>>>>>>> 79ac271ba90e0a165f0c94730b1549ea45cc880f
 请求方式：
 
 - GET
