@@ -45,6 +45,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 请求URL： 
 - `http://127.0.0.1:8585/student/register`
   
+
 请求方式：
 - POST 
 
@@ -73,6 +74,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 请求URL： 
 - `http://127.0.0.1:8585/student/login`
   
+
 请求方式：
 - POST 
 
@@ -105,6 +107,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 请求URL： 
 - `http://127.0.0.1:8585/professor`
   
+
 请求方式：
 - GET 
 
@@ -146,6 +149,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 - `http://127.0.0.1:8585/course/add`
   
+
 请求方式：
 
 - POST
@@ -178,7 +182,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 请求URL:
 
 - `http://127.0.0.1:8585/course`
-  
+
 请求方式：
 
 - GET
@@ -220,6 +224,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 - `http://127.0.0.1:8585/professor-CR/add`
   
+
 请求方式：
 
 - POST
@@ -252,7 +257,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 请求URL:
 
 - `http://127.0.0.1:8585/professor_CR`
-  
+
 请求方式：
 
 - GET
@@ -296,6 +301,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 - `http://127.0.0.1:8585/professor`
   
+
 请求方式：
 
 - DELETE
@@ -313,7 +319,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
   {
     "info": "Success",
   }
-```
+ ```
 
  返回参数说明
 
@@ -325,7 +331,111 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 ### 1. 创建对课程的C&R
 
+请求 URL：
+
+* `http://127.0.0.1:8585/course-CR/add`
+
+请求方式：
+
+* POST
+
+参数：
+
+| 参数名           | 必选 | 类型   | 说明    |
+| ---------------- | ---- | ------ | ------- |
+| `professor_name` | 是   | string | 教授名  |
+| `username`       | 是   | string | 用户名  |
+| `course_id`      | 是   | string | 课程 id |
+| `rate`           | 是   | int    | 评分    |
+| `comment`        | 否   | string | 评价    |
+
+返回方式：
+
+```json
+{
+    "info": "Success",
+}
+```
+
+返回参数说明：
+
+| 参数 | 类型   | 说明                                            |
+| ---- | ------ | ----------------------------------------------- |
+| info | string | "Success"表示删除成功；若失败，为失败详细说明。 |
+
 ### 2. 获取对课程的C&R
 
+请求 URL：
+
+* `http://127.0.0.1:8585/course-CR`
+
+请求方式：
+
+* GET
+
+参数：
+
+| 参数        | 必选 | 类型   | 说明    |
+| ----------- | ---- | ------ | ------- |
+| `course_id` | 是   | string | 课程 id |
+
+返回示例：
+
+```json
+  {
+    "course_cr_list": [
+      {
+        "professor_name": "professor_1",
+        "username": "abc123",
+        "course_id": "ci6206",
+        "rate": 3,
+        "comment": "boring"
+      }, 
+      {
+        "professor_name": "professor_2",
+        "username": "jojo123", 
+        "course_id": "ci6208",
+        "rate": 2,
+        "comment": "great"
+      },
+    ]
+  }
+```
+
+返回参数说明：
+
+| 参数             | 类型 | 说明                        |
+| ---------------- | ---- | --------------------------- |
+| `course_cr_list` | list | 其中每个元素是单个课程的C&R |
+
 ### 3. 删除对课程的C&R
+
+请求 URL：
+
+* `http://127.0.0.1:8585/course`
+
+请求方式：
+
+* DELETE
+
+参数名：
+
+| 参数        | 必选 | 类型   | 说明    |
+| ----------- | ---- | ------ | ------- |
+| `course_id` | 是   | string | 课程 id |
+| `username`  | 是   | string | 用户名  |
+
+返回示例：
+
+```json
+{
+    "info": "Success",
+}
+```
+
+返回参数说明：
+
+| 参数 | 类型   | 说明                                            |
+| ---- | ------ | ----------------------------------------------- |
+| info | string | "Success"表示删除成功；若失败，为失败详细说明。 |
 
