@@ -9,18 +9,11 @@ import java.io.IOException;
 public class StudentServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String requestUrl = request.getRequestURI();
-        String username = requestUrl.substring("/student/".length());
 
-        // todo: find Student user from database
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        String emailAddress = request.getParameter("email_address");
 
-        // todo: new a Student user in database
     }
 }
