@@ -7,11 +7,11 @@ public class Student {
     private String password;
     private String salt;
 
-    public Student(String username, String emailAddress, String password, String salt) {
+    public Student() {}
+
+    public Student(String username, String emailAddress) {
         this.username = username;
         this.emailAddress = emailAddress;
-        this.password = password;
-        this.salt = salt;
     }
 
     public String getUsername() {
@@ -28,5 +28,21 @@ public class Student {
 
     public String getSalt() {
         return salt;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 }

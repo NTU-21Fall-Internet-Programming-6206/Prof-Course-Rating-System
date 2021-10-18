@@ -5,8 +5,9 @@ public class Course {
     private String professorName;
     private String courseName;
 
-    public Course(String courseID, String professorName, String courseName) {
-        this.courseID = courseID;
+    public Course() {}
+
+    public Course(String professorName, String courseName) {
         this.professorName = professorName;
         this.courseName = courseName;
     }
@@ -21,5 +22,17 @@ public class Course {
 
     public String getCourseName() {
         return courseName;
+    }
+
+    public void setCourseID(String courseID) {
+        this.courseID = courseID;
+    }
+
+    public void setProfessorName(String professorName) {
+        this.professorName = professorName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
     }
 }
