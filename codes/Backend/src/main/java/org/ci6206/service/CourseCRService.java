@@ -1,6 +1,5 @@
 package org.ci6206.service;
 
-import org.ci6206.model.Course;
 import org.ci6206.model.CourseCR;
 
 public class CourseCRService {

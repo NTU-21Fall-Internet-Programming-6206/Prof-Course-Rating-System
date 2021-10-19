@@ -6,6 +6,8 @@ import java.security.NoSuchAlgorithmException;
 import java.util.UUID;
 
 public class MD5Util {
+    private final static String HEX_DIGITS = "0123456789abcdef";
+    
     public static String getMD5(String s) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
@@ -23,11 +25,10 @@ public class MD5Util {
     }
 
     private static String hashToHex(byte[] bytes) {
-        final char[] HEX_DIGITS = "0123456789abcdef".toCharArray();
         StringBuilder res = new StringBuilder(bytes.length << 1);
-        for (int i = 0; i < bytes.length; ++i) {
-            res.append(HEX_DIGITS[(bytes[i]>>4) & 0xf]);
-            res.append(HEX_DIGITS[bytes[i] & 0xf]);
+        for (byte b : bytes) {
+            res.append(HEX_DIGITS.charAt((b >> 4) & 0xf));
+            res.append(HEX_DIGITS.charAt(b & 0xf));
         }
         return res.toString();
     }
