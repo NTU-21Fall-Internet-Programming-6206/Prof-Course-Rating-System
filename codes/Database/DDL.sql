@@ -18,7 +18,7 @@ CREATE TABLE Professors (
 );
 
 CREATE TABLE Courses (
-    course_id VARCHAR(10) NOT NULL, 
+    course_id VARCHAR(64) NOT NULL, 
     professor_name VARCHAR(30) NOT NULL, 
     course_name VARCHAR(20) NOT NULL,
     PRIMARY KEY (course_id), 
@@ -42,7 +42,7 @@ CREATE TABLE CR_on_Course (
     auto_id INT NOT NULL AUTO_INCREMENT, 
     professor_name VARCHAR(30) NOT NULL, 
     username VARCHAR(20) NOT NULL, 
-    course_id VARCHAR(10) NOT NULL, 
+    course_id VARCHAR(64) NOT NULL, 
     rate INT NOT NULL, 
     comment VARCHAR(1000), 
     PRIMARY KEY (auto_id), 

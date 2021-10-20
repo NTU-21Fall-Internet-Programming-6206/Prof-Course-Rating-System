@@ -18,10 +18,12 @@ public class CourseService {
         return course;
     }
 
-    public static Course create(String professorName, String courseName) {
-        Course course = new Course(professorName, courseName);
-        String hashID = MD5Util.getMD5(courseName);
-        course.setCourseID(hashID);
+    public static String generateCourseId(String courseName) {
+        return MD5Util.getMD5(courseName);
+    }
+
+    public static Course create(String courseId, String professorName, String courseName) {
+        Course course = new Course(courseId, professorName, courseName);
         // todo: dao.insert()
         return course;
     }
