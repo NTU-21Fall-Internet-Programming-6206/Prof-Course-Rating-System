@@ -1,22 +1,19 @@
 package org.ci6206.service;
 
+import org.ci6206.dbAPI.ProfessorDBAO;
 import org.ci6206.model.Professor;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ProfessorService {
-    public static ArrayList<Professor> getInfo() {
-        ArrayList<Professor> professors = new ArrayList<>();
-        // todo: search for all the professors from database, add them to professors
-
-        return professors;
+    public static List<Professor> getInfo() throws Exception {
+        ProfessorDBAO con = new ProfessorDBAO();
+        return con.findAllProfessor();
     }
 
-    public static Professor getInfo(String professorName) {
-        // todo: Professor professor = dao.search(professorName)
-        Professor professor = new Professor();
-
-        // if found, return professor; else return null
-        return professor;
+    public static Professor getInfo(String professorName) throws Exception {
+        ProfessorDBAO con = new ProfessorDBAO();
+        return con.findProfessorWithProfessorName(professorName);
     }
 }

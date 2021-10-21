@@ -1,30 +1,30 @@
 package org.ci6206.service;
 
+import org.ci6206.dbAPI.CourseDBAO;
 import org.ci6206.model.Course;
 import org.ci6206.util.MD5Util;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class CourseService {
-    public static ArrayList<Course> getInfo() {
-        ArrayList<Course> courses = new ArrayList<>();
-        // todo: search for all the courses from database, add them to courses
-        return courses;
+    public static List<Course> getInfo() throws Exception {
+        CourseDBAO con = new CourseDBAO();
+        return con.findAllCourse();
     }
 
-    public static Course getInfo(String courseName) {
-        // todo: search for the course by its name
-        Course course = new Course();
-        return course;
+    public static List<Course> getInfo(String courseName) throws Exception {
+        CourseDBAO con = new CourseDBAO();
+        return con.findCourseWithCourseName(courseName);
     }
 
     public static String generateCourseId(String courseName) {
         return MD5Util.getMD5(courseName);
     }
 
-    public static Course create(String courseId, String professorName, String courseName) {
+    public static Course create(String courseId, String professorName, String courseName) throws Exception {
         Course course = new Course(courseId, professorName, courseName);
-        // todo: dao.insert()
+        CourseDBAO con = new CourseDBAO();
+        con.addCourse(course);
         return course;
     }
 }

@@ -1,10 +1,11 @@
 package org.ci6206.service;
 
+import org.ci6206.dbAPI.StudentDBAO;
 import org.ci6206.model.Student;
 import org.ci6206.util.MD5Util;
 
 public class StudentService {
-    public static Student register(String username, String password, String emailAddress) {
+    public static Student register(String username, String password, String emailAddress) throws Exception {
         Student student = new Student(username, emailAddress);
 
         String salt = MD5Util.getSalt();
@@ -12,13 +13,18 @@ public class StudentService {
         student.setSalt(salt);
         student.setPassword(encryptedPassword);
 
-        // todo: dao.insert()
+        StudentDBAO con = new StudentDBAO();
+        con.addStudent(student);
         return student;
     }
 
-    public static void login(String username, String password) {
-        // todo: Student student = dao.search(username)
-        Student student = new Student("", "");
+    public static void login(String username, String password) throws Exception {
+        StudentDBAO con = new StudentDBAO();
+        Student student = con.findStudentWithUsername(username);
+        if (student == null) {
+            // failed
+            return;
+        }
 
         String salt = student.getSalt();
         String encryptedPassword = student.getPassword();
