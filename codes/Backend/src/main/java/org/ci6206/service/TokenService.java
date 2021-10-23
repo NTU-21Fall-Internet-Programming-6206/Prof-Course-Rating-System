@@ -23,4 +23,11 @@ public class TokenService {
         TokenDBAO tokenDBAO = new TokenDBAO();
         return tokenDBAO.findTokenWithUsername(username);
     }
+
+    public static boolean checkTokenValid(String token) throws Exception {
+        if (token == checkTokenWithToken(token).getToken()) {
+            return true;
+        }
+        return false;
+    } 
 }
