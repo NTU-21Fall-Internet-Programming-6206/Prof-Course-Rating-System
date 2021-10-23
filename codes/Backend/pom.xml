@@ -19,6 +19,7 @@
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -26,6 +27,14 @@
       <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
+
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>4.0.0</version>
+        <scope>provided</scope>
+      </dependency>
+
     <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
     <dependency>
       <groupId>javax.servlet</groupId>

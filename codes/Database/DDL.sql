@@ -7,6 +7,7 @@ CREATE TABLE Students (
     email_address VARCHAR(30) NOT NULL,
     password VARCHAR(64) NOT NULL, 
     salt VARCHAR(64) NOT NULL, 
+    token VARCHAR(64) NOT NULL, 
     PRIMARY KEY (username)
 );
 

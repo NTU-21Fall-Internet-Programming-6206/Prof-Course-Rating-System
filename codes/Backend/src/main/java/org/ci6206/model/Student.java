@@ -6,12 +6,14 @@ public class Student {
 
     private String password;
     private String salt;
+    private String token;
 
     public Student() {}
 
     public Student(String username, String emailAddress) {
         this.username = username;
         this.emailAddress = emailAddress;
+        
     }
 
     public String getUsername() {
@@ -30,6 +32,10 @@ public class Student {
         return salt;
     }
 
+    public String getToken() {
+        return token;
+    }
+
     public void setUsername(String username) {
         this.username = username;
     }
@@ -45,4 +51,9 @@ public class Student {
     public void setSalt(String salt) {
         this.salt = salt;
     }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 }
+

@@ -89,7 +89,8 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 ```json
   {
     "info": "Success",
-    "token": "b6aaed9f3f669su8b6aaed9f3f669su8"
+    "token": "b6aaed9f3f669su8b6aaed9f3f669su8", 
+    "username": "userA"
   }
 ```
  返回参数说明 
@@ -98,6 +99,8 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 |:-----  |:-----|-----                           |
 |info |string   |"Success"表示登录成功；若失败，为失败详细说明。  |
 |token |string   |若登录成功，返回含32个字符的字符串作为token；若失败，为空字符串。|
+|username |string   |若登录成功，返回该用户的用户名；若失败，为空字符串。|
+
 
 
 ## 三、Professor
