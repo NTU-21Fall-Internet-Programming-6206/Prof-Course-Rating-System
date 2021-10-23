@@ -9,3 +9,5 @@ insert into Students (username, email_address, password, salt) values ("a", "b@n
 insert into CR_on_Course (professor_name, username, course_id, rate, comment) values ("B", "B", "B", 4, "B");
 
 insert into CR_on_professor (professor_name, username, rate, comment) values ("B", "B", 4, "BCD");
+
+insert into token (username, token) values ("a", "asdsdgdffdsg");

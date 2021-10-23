@@ -70,7 +70,15 @@ class Main
         rsprofessorCRC = professorCRDBAO.findProfessorCRWithProfessorName("B");
         System.out.println(rsprofessorCRC.toString());
 
-        
+        TokenDBAO tokenDBAO = new TokenDBAO();
+        Token tokenB = new Token("B", "asdfdsfdasd");
+        tokenDBAO.addToken(tokenB);
+        Token rsToken = null;
+        rsToken = tokenDBAO.findTokenWithUsername("B");
+        System.out.println(rsToken.getToken());
+        rsToken = tokenDBAO.findUsernameWithToken("asdfdsfdasd");
+        System.out.println(rsToken.getUsername());
+    
 
 
 
