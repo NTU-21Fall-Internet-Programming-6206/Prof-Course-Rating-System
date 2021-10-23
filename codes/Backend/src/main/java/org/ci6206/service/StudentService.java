@@ -5,7 +5,7 @@ import org.ci6206.model.Student;
 import org.ci6206.util.MD5Util;
 
 public class StudentService {
-    public static Student register(String username, String password, String emailAddress) throws Exception {
+    public static void register(String username, String password, String emailAddress) throws Exception {
         Student student = new Student(username, emailAddress);
 
         String salt = MD5Util.getSalt();
@@ -15,7 +15,6 @@ public class StudentService {
 
         StudentDBAO con = new StudentDBAO();
         con.addStudent(student);
-        return student;
     }
 
     public static boolean login(String username, String password) throws Exception {

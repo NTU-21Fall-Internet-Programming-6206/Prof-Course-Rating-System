@@ -21,7 +21,7 @@ public class StudentLoginServlet extends HttpServlet {
         resp.setContentType("text/json");
         JSONObject msg = JSONUtil.getRequestJson(req);
         if (msg == null) {
-            throw new IOException();
+            throw new IOException("empty request");
         }
 
         String username = msg.getString("username");
