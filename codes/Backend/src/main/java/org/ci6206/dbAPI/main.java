@@ -76,7 +76,7 @@ class Main
         Token rsToken = null;
         rsToken = tokenDBAO.findTokenWithUsername("B");
         System.out.println(rsToken.getToken());
-        rsToken = tokenDBAO.findUsernameWithToken("asdfdsfdasd");
+        rsToken = tokenDBAO.findTokenWithToken("asdfdsfdasd");
         System.out.println(rsToken.getUsername());
     
 

@@ -110,7 +110,7 @@ public class TokenDBAO {
         return null;
     }
 
-    public Token findUsernameWithToken(String token) {
+    public Token findTokenWithToken(String token) {
         try {
             String selectStatement = "Select * from Token where token = ?";
             getConnection();

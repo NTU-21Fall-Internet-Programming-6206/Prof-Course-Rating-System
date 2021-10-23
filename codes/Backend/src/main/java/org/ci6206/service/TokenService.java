@@ -16,11 +16,11 @@ public class TokenService {
 
     public static Token checkTokenWithToken(String token) throws Exception {
         TokenDBAO tokenDBAO = new TokenDBAO();
-        return tokenDBAO.findUsernameWithToken(token);
+        return tokenDBAO.findTokenWithToken(token);
     }
 
     public static Token checkTokenWithUsername(String username) throws Exception {
         TokenDBAO tokenDBAO = new TokenDBAO();
-        return tokenDBAO.findUsernameWithToken(username);
+        return tokenDBAO.findTokenWithUsername(username);
     }
 }
