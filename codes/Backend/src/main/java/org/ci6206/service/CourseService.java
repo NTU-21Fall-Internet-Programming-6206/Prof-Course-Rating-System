@@ -17,14 +17,9 @@ public class CourseService {
         return con.findCourseWithCourseName(courseName);
     }
 
-    public static String generateCourseId(String courseName) {
-        return MD5Util.getMD5(courseName);
-    }
-
-    public static Course create(String courseId, String professorName, String courseName) throws Exception {
+    public static void create(String courseId, String professorName, String courseName) throws Exception {
         Course course = new Course(courseId, professorName, courseName);
         CourseDBAO con = new CourseDBAO();
         con.addCourse(course);
-        return course;
     }
 }

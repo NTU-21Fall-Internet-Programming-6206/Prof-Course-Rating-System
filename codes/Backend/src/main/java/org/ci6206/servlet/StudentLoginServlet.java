@@ -27,7 +27,6 @@ public class StudentLoginServlet extends HttpServlet {
         String username = msg.getString("username");
         String loginPassword = msg.getString("password");
         try {
-            
             Token token = TokenService.checkTokenWithUsername(username);
             JSONObject jsonObject = new JSONObject();
             PrintWriter printWriter = resp.getWriter();
