@@ -28,6 +28,7 @@ public class StudentRegisterServlet extends HttpServlet {
         String emailAddress = msg.getString("email_address");
         try {
             StudentService.register(username, password, emailAddress);
+            TokenService.generateTokenForUsername(username);
             JSONObject jsonObject = new JSONObject();
             PrintWriter printWriter = resp.getWriter();
             jsonObject.put("info", "Success");

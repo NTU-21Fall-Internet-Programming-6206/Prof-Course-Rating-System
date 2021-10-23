@@ -27,13 +27,13 @@ public class StudentLoginServlet extends HttpServlet {
         String username = msg.getString("username");
         String loginPassword = msg.getString("password");
         try {
-            TokenDBAO con = new TokenDBAO();
-            Token token = con.findTokenWithUsername(username);
+            
+            Token token = TokenService.checkTokenWithUsername(username);
             JSONObject jsonObject = new JSONObject();
             PrintWriter printWriter = resp.getWriter();
             if (StudentService.login(username, loginPassword)) {
                 jsonObject.put("info", "Success");
-                jsonObject.put("token", token.toString());
+                jsonObject.put("token", token.getToken());
                 jsonObject.put("username", username);
             } else {
                 jsonObject.put("info", "Failed");
