@@ -35,14 +35,14 @@ public class ProfessorServlet extends HttpServlet {
                 System.out.println(professorName);
                 if(professorName == null) {
                     List<Professor> professorList = ProfessorService.getAllProfessor();
-                    jsonObject.put("professor_list", JSON.toJSONString(professorList));
+                    jsonObject.put("professor_list", professorList);
                     PrintWriter printWriter = resp.getWriter();
                     printWriter.write(jsonObject.toString());
                     printWriter.flush();
                 }
                 else {
                     Professor professor = ProfessorService.getProfessorWithProfessorName(professorName);
-                    jsonObject.put("professor_list", JSON.toJSONString(professor));
+                    jsonObject.put("professor_list", professor);
                     PrintWriter printWriter = resp.getWriter();
                     printWriter.write(jsonObject.toString());
                     printWriter.flush();
