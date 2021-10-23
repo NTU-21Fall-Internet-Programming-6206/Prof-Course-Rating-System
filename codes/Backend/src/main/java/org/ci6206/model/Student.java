@@ -6,7 +6,6 @@ public class Student {
 
     private String password;
     private String salt;
-    private String token;
 
     public Student() {}
 
@@ -32,10 +31,6 @@ public class Student {
         return salt;
     }
 
-    public String getToken() {
-        return token;
-    }
-
     public void setUsername(String username) {
         this.username = username;
     }
@@ -52,8 +47,5 @@ public class Student {
         this.salt = salt;
     }
 
-    public void setToken(String token) {
-        this.token = token;
-    }
 }
 
