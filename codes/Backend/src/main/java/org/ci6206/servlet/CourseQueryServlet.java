@@ -19,6 +19,10 @@ import java.util.List;
 public class CourseQueryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+        resp.setHeader("Access-Control-Allow-Headers", "*");
+        resp.setHeader("Access-Control-Allow-Origin", "*");
+        resp.setHeader("Access-Control-Allow-Methods", "*");
+
         String token = req.getHeader("Token");
         try {
             if (!TokenService.checkTokenValid(token)) {

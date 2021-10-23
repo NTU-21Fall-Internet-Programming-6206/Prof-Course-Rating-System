@@ -15,6 +15,10 @@ import java.io.PrintWriter;
 public class CourseCreateServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setHeader("Access-Control-Allow-Headers", "*");
+        resp.setHeader("Access-Control-Allow-Origin", "*");
+        resp.setHeader("Access-Control-Allow-Methods", "*");
+
         String token = req.getHeader("Token");
         try {
             if (!TokenService.checkTokenValid(token)) {

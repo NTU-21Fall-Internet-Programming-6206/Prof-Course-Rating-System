@@ -17,8 +17,12 @@ import org.ci6206.util.JSONUtil;
 public class ProfessorCRCreateServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        JSONObject jsonObject = new JSONObject();
         resp.setContentType("text/json");
+        resp.setHeader("Access-Control-Allow-Headers", "*");
+        resp.setHeader("Access-Control-Allow-Origin", "*");
+        resp.setHeader("Access-Control-Allow-Methods", "*");
+
+        JSONObject jsonObject = new JSONObject();
         String token = req.getHeader("Token");
         try {
             if(! TokenService.checkTokenValid(token)) {
