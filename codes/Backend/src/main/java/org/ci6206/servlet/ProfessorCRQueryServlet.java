@@ -14,7 +14,7 @@ import org.ci6206.model.*;
 import org.ci6206.util.JSONUtil;
 
 @WebServlet(urlPatterns = "/professor-CR")
-public class ProfessorCRServlet extends HttpServlet {
+public class ProfessorCRQueryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         JSONObject jsonObject = new JSONObject();
