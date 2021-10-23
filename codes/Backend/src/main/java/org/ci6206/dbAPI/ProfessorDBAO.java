@@ -10,10 +10,10 @@ public class ProfessorDBAO {
     private boolean conFree = true;
 
     // Database configuration
-    public static String url = "jdbc:mysql://localhost:3306/prof_course_rating_system";
+    public static String url = "jdbc:mysql://rm-t4ny77i38s58u80cq9o.mysql.singapore.rds.aliyuncs.com:3306/prof_course_rating_system";
     public static String dbDriver = "com.mysql.cj.jdbc.Driver";
-    public static String username = "root";
-    public static String password = "panzer123";
+    public static String username = "ci6206";
+    public static String password = "ci6206wudi*";
 
     public ProfessorDBAO() throws Exception {
         try {
