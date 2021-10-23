@@ -2,9 +2,9 @@
 
 RESTful API
 
-URL: http://127.0.0.1:8585/
+URL: http://34.126.85.190:8080/
 
-在用户登录获得token后，后续其他所有请求都要在请求头Header中添加 `Authorization = TOKEN_STRING`;
+在用户登录获得token后，后续其他所有请求都要在请求头Header中添加 `Token = TOKEN_STRING`;
 
 GET请求，参数体现在url上。所有查询（获取）请求用GET；
 
@@ -43,7 +43,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 ### 1. Student注册
 
 请求URL： 
-- `http://127.0.0.1:8585/student/register`
+- `http://34.126.85.190:8080/student/register`
   
 
 请求方式：
@@ -72,7 +72,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 ### 2. Student登录
 
 请求URL： 
-- `http://127.0.0.1:8585/student/login`
+- `http://34.126.85.190:8080/student/login`
   
 
 请求方式：
@@ -108,7 +108,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 ### 1. 获取Professor信息
 
 请求URL： 
-- `http://127.0.0.1:8585/professor`
+- `http://34.126.85.190:8080/professor`
   
 
 请求方式：
@@ -150,7 +150,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 请求URL:
 
-- `http://127.0.0.1:8585/course/add`
+- `http://34.126.85.190:8080/course/add`
   
 
 请求方式：
@@ -185,7 +185,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 请求URL:
 
-- `http://127.0.0.1:8585/course`
+- `http://34.126.85.190:8080/course`
 
 请求方式：
 
@@ -227,7 +227,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 请求URL:
 
-- `http://127.0.0.1:8585/professor-CR/add`
+- `http://34.126.85.190:8080/professor-CR/add`
   
 
 请求方式：
@@ -261,7 +261,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 请求URL:
 
-- `http://127.0.0.1:8585/professor-CR`
+- `http://34.126.85.190:8080/professor-CR`
 
 请求方式：
 
@@ -304,7 +304,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 请求URL:
 
-- `http://127.0.0.1:8585/professor`
+- `http://34.126.85.190:8080/professor`
   
 
 请求方式：
@@ -338,7 +338,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 请求 URL：
 
-* `http://127.0.0.1:8585/course-CR/add`
+* `http://34.126.85.190:8080/course-CR/add`
 
 请求方式：
 
@@ -372,7 +372,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 请求 URL：
 
-* `http://127.0.0.1:8585/course-CR`
+* `http://34.126.85.190:8080/course-CR`
 
 请求方式：
 
@@ -417,7 +417,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 请求 URL：
 
-* `http://127.0.0.1:8585/course`
+* `http://34.126.85.190:8080/course`
 
 请求方式：
 
