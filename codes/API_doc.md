@@ -161,6 +161,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
+|course_id |是  |string |课程ID   |
 |professor_name |是  |string |教授名   |
 |course_name |是  |string |课程名    |
 

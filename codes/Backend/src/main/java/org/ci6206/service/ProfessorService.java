@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProfessorService {
-    public static List<Professor> getInfo() throws Exception {
+    public static List<Professor> getAllProfessor() throws Exception {
         ProfessorDBAO con = new ProfessorDBAO();
         return con.findAllProfessor();
     }
 
-    public static Professor getInfo(String professorName) throws Exception {
+    public static Professor getProfessorWithProfessorName(String professorName) throws Exception {
         ProfessorDBAO con = new ProfessorDBAO();
         return con.findProfessorWithProfessorName(professorName);
     }
