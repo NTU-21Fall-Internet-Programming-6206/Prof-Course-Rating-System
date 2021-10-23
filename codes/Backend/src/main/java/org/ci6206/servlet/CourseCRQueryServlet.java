@@ -17,6 +17,7 @@ import java.util.List;
 public class CourseCRQueryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+        resp.setContentType("text/json");
         resp.setHeader("Access-Control-Allow-Headers", "*");
         resp.setHeader("Access-Control-Allow-Origin", "*");
         resp.setHeader("Access-Control-Allow-Methods", "*");
@@ -30,8 +31,6 @@ public class CourseCRQueryServlet extends HttpServlet {
                 printWriter.write(jsonObject.toString());
                 printWriter.flush();
             } else {
-                resp.setContentType("text/json");
-
                 String courseID = req.getParameter("course_id");
                 PrintWriter printWriter = resp.getWriter();
                 JSONObject jsonObject = new JSONObject();

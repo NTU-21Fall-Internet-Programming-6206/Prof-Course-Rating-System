@@ -17,6 +17,7 @@ import org.ci6206.util.JSONUtil;
 public class CourseCRCreateServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/json");
         resp.setHeader("Access-Control-Allow-Headers", "*");
         resp.setHeader("Access-Control-Allow-Origin", "*");
         resp.setHeader("Access-Control-Allow-Methods", "*");
@@ -30,7 +31,6 @@ public class CourseCRCreateServlet extends HttpServlet {
                 printWriter.write(jsonObject.toString());
                 printWriter.flush();
             } else {
-                resp.setContentType("text/json");
                 JSONObject msg = JSONUtil.getRequestJson(req);
                 if (msg == null) {
                     throw new IOException("empty request");
