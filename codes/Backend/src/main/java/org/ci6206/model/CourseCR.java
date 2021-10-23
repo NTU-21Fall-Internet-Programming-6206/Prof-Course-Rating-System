@@ -10,13 +10,6 @@ public class CourseCR {
 
     public CourseCR() {}
 
-    public CourseCR(String professorName, String username, String courseID, int rating) {
-        this.professorName = professorName;
-        this.username = username;
-        this.courseID = courseID;
-        this.rating = rating;
-    }
-
     public CourseCR(String professorName, String username, String courseID, int rating, String comment) {
         this.professorName = professorName;
         this.username = username;

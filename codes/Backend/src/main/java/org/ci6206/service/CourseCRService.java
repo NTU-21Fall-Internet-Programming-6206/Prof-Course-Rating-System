@@ -6,21 +6,13 @@ import org.ci6206.model.CourseCR;
 import java.util.List;
 
 public class CourseCRService {
-    public static CourseCR create(String professorName, String username, String courseID, int rating) throws Exception {
-        CourseCR courseCR = new CourseCR(professorName, username, courseID, rating);
-        CourseCRDBAO con = new CourseCRDBAO();
-        con.addCourseCR(courseCR);
-        return courseCR;
-    }
-
-    public static CourseCR create(String professorName, String username, String courseID, int rating, String comment) throws Exception {
+    public static boolean create(String professorName, String username, String courseID, int rating, String comment) throws Exception {
         CourseCR courseCR = new CourseCR(professorName, username, courseID, rating, comment);
         CourseCRDBAO con = new CourseCRDBAO();
-        con.addCourseCR(courseCR);
-        return courseCR;
+        return con.addCourseCR(courseCR);
     }
 
-    public static List<CourseCR> getInfo(String courseID) throws Exception {
+    public static List<CourseCR> getCourseCRListWithCourseID(String courseID) throws Exception {
         CourseCRDBAO con = new CourseCRDBAO();
         return con.findCourseCRWithCourseId(courseID);
     }

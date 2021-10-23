@@ -51,7 +51,7 @@ class Main
         System.out.println(coursefindResult.get(0).getCourseID());
 
         CourseCRDBAO courseCRDBAO = new CourseCRDBAO();
-        CourseCR courseCRC = new CourseCR("B", "B", "B", 3);
+        CourseCR courseCRC = new CourseCR("B", "B", "B", 3, "");
         courseCRDBAO.addCourseCR(courseCRC);
         List<CourseCR> rsCourseCR = courseCRDBAO.findCourseCRWithCourseId("B");
         System.out.println(rsCourseCR.size());
