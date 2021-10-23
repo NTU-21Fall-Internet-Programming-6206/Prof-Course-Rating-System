@@ -25,9 +25,6 @@ public class TokenService {
     }
 
     public static boolean checkTokenValid(String token) throws Exception {
-        if (token == checkTokenWithToken(token).getToken()) {
-            return true;
-        }
-        return false;
-    } 
+        return token.equals(checkTokenWithToken(token).getToken());
+    }
 }
