@@ -10,8 +10,24 @@ function Signup() {
     let history = useHistory();
 
     const clickSignup = () => {
-      console.log({'username': username, 'password': password, 'email': email})
-      history.push('/signin')
+      const user = {'username': username, 'password': password, 'email_address': email}
+      const request = new Request('http://34.126.85.190:8080/student/register', {
+        method: "POST",
+        body: JSON.stringify(user),
+        
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json"
+        }
+      });
+      fetch(request)
+        .then(function(res) {
+          alert('Register success!')
+          history.push("/signin")
+        })
+        .catch(error => {
+          console.log(error);
+        });
     }
     return (
       <div className="App">
