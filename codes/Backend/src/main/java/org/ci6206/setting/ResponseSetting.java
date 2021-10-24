@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ResponseSetting {
     public static void responseConfig(HttpServletRequest req, HttpServletResponse resp) {
         resp.setContentType("text/json");
-        resp.setHeader("Access-Control-Allow-Origin", req.getHeader("Origin"));
+        resp.setHeader("Access-Control-Allow-Origin", "http://34.126.85.190:80");
         resp.setHeader("Access-Control-Allow-Methods", "*");
         resp.setHeader("Access-Control-Max-Age", "3600");
         resp.setHeader("Access-Control-Allow-Headers", "*");
