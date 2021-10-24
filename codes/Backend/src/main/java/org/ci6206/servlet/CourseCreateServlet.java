@@ -36,10 +36,13 @@ public class CourseCreateServlet extends HttpServlet {
                 String courseName = msg.getString("course_name");
                 String courseID = msg.getString("course_id");
 
-                CourseService.create(courseID, professorName, courseName);
                 PrintWriter printWriter = resp.getWriter();
                 JSONObject jsonObject = new JSONObject();
-                jsonObject.put("info", "Success");
+                if (CourseService.create(courseID, professorName, courseName)) {
+                    jsonObject.put("info", "Success");
+                } else {
+                    jsonObject.put("info", "Failed");
+                }
                 printWriter.write(jsonObject.toString());
                 printWriter.flush();
             }

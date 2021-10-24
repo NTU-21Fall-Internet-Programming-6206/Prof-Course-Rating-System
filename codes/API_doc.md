@@ -60,7 +60,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
  返回示例
 ```json
   {
-    "info": "Success",
+    "info": "Success"
   }
 ```
  返回参数说明 
@@ -108,8 +108,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 ### 1. 获取Professor信息
 
 请求URL： 
-- `http://34.126.85.190:8080/professor`
-  
+- `http://34.126.85.190:8080/professor?professor_name=Gerard Goggin`
 
 请求方式：
 - GET 
@@ -121,22 +120,15 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 |professor_name |否  |string |教授名。若有该参数，返回该教授的信息；若无此参数，返回所有教授的信息   |
 
 
- 返回示例
+ 返回示例	
 ```json
-  {
-    "professor_list": [
-      {
-        "professor_name": "professor_1",
-        "title": "Professor", 
-        "email_address": "abc@ntu.edu.sg"
-      }, 
-      {
-        "professor_name": "professor_2",
-        "title": "Professor", 
-        "email_address": "def@ntu.edu.sg"
-      },
-    ]
-  }
+{
+    "professor_list": {
+        "emailAddress": "gerard.goggin@ntu.edu.sg",
+        "professorName": "Gerard Goggin",
+        "title": "Professor"
+    }
+}
 ```
  返回参数说明 
 
@@ -169,7 +161,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 ```json
   {
-    "info": "Success",
+    "info": "Success"
   }
 ```
 
@@ -185,7 +177,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 请求URL:
 
-- `http://34.126.85.190:8080/course`
+- `http://34.126.85.190:8080/course?professor_name=Alton Chua Yeow Kuan`
 
 请求方式：
 
@@ -201,18 +193,15 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
  返回示例
 
 ```json
-  {
+{
     "course_list": [
-      {
-        "course_name": "course_1",
-        "professor_name": "professor_1"
-      }, 
-      {
-        "course_name": "course2_2",
-        "professor_name": "professor_2"
-      },
+        {
+            "courseID": "CI6204",
+            "courseName": "Software Project Management",
+            "professorName": "Alton Chua Yeow Kuan"
+        }
     ]
-  }
+}
 ```
 
  返回参数说明
@@ -247,7 +236,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 ```json
   {
-    "info": "Success",
+    "info": "Success"
   }
 ```
 
@@ -322,7 +311,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
  ```json
   {
-    "info": "Success",
+    "info": "Success"
   }
  ```
 
@@ -346,19 +335,19 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 参数：
 
-| 参数名           | 必选 | 类型   | 说明    |
-| ---------------- | ---- | ------ | ------- |
-| `professor_name` | 是   | string | 教授名  |
-| `username`       | 是   | string | 用户名  |
-| `course_id`      | 是   | string | 课程 id |
-| `rate`           | 是   | int    | 评分    |
-| `comment`        | 否   | string | 评价    |
+| 参数名         | 必选 | 类型   | 说明    |
+| -------------- | ---- | ------ | ------- |
+| professor_name | 是   | string | 教授名  |
+| username       | 是   | string | 用户名  |
+| course_id      | 是   | string | 课程 id |
+| rate           | 是   | int    | 评分    |
+| comment        | 否   | string | 评价    |
 
 返回方式：
 
 ```json
 {
-    "info": "Success",
+    "info": "Success"
 }
 ```
 
@@ -380,9 +369,9 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 参数：
 
-| 参数        | 必选 | 类型   | 说明    |
-| ----------- | ---- | ------ | ------- |
-| `course_id` | 是   | string | 课程 id |
+| 参数      | 必选 | 类型   | 说明    |
+| --------- | ---- | ------ | ------- |
+| course_id | 是   | string | 课程 id |
 
 返回示例：
 
@@ -409,9 +398,9 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 返回参数说明：
 
-| 参数             | 类型 | 说明                        |
-| ---------------- | ---- | --------------------------- |
-| `course_cr_list` | list | 其中每个元素是单个课程的C&R |
+| 参数           | 类型 | 说明                        |
+| -------------- | ---- | --------------------------- |
+| course_cr_list | list | 其中每个元素是单个课程的C&R |
 
 ### 3. 删除对课程的C&R（会删除该用户对该课程所有的C&R）
 
@@ -425,16 +414,16 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 参数名：
 
-| 参数        | 必选 | 类型   | 说明    |
-| ----------- | ---- | ------ | ------- |
-| `course_id` | 是   | string | 课程 id |
-| `username`  | 是   | string | 用户名  |
+| 参数      | 必选 | 类型   | 说明    |
+| --------- | ---- | ------ | ------- |
+| course_id | 是   | string | 课程 id |
+| username  | 是   | string | 用户名  |
 
 返回示例：
 
 ```json
 {
-    "info": "Success",
+    "info": "Success"
 }
 ```
 

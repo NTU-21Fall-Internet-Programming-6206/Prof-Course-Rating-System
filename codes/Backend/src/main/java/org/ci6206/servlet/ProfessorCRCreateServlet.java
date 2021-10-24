@@ -41,10 +41,12 @@ public class ProfessorCRCreateServlet extends HttpServlet {
                 Integer rate = msg.getInteger("rate");
                 String comment = msg.getString("comment");
 
-                ProfessorCRService.create(professorName, username, rate, comment);
-
                 PrintWriter printWriter = resp.getWriter();
-                jsonObject.put("info", "Success");
+                if (ProfessorCRService.create(professorName, username, rate, comment)) {
+                    jsonObject.put("info", "Success");
+                } else {
+                    jsonObject.put("info", "Failed");
+                }
                 printWriter.write(jsonObject.toString());
                 printWriter.flush();
             }
