@@ -250,7 +250,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 请求URL:
 
-- `http://34.126.85.190:8080/professor-CR`
+- `http://34.126.85.190:8080/professor-CR?professor_name=Alton Chua Yeow Kuan`
 
 请求方式：
 
@@ -265,22 +265,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
  返回示例
 
 ```json
-  {
-    "professor_cr_list": [
-      {
-        "professor_name": "professor_1",
-        "username": "abc123", 
-        "rate": 3,
-        "comment": "boring"
-      }, 
-      {
-        "professor_name": "professor_1",
-        "username": "jojo123", 
-        "rate": 2,
-        "comment": "great"
-      },
-    ]
-  }
+
 ```
 
  返回参数说明
