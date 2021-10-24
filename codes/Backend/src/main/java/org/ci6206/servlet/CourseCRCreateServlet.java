@@ -18,7 +18,7 @@ import java.io.PrintWriter;
 public class CourseCRCreateServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ResponseSetting.ResponseConfig(req, resp);
+        ResponseSetting.responseConfig(req, resp);
 
         String token = req.getHeader("Token");
         try {

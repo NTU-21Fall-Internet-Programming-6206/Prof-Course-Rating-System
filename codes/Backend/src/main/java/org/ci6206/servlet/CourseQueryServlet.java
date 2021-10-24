@@ -18,7 +18,7 @@ import java.util.List;
 public class CourseQueryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
-        ResponseSetting.ResponseConfig(req, resp);
+        ResponseSetting.responseConfig(req, resp);
 
         String token = req.getHeader("Token");
         try {

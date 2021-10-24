@@ -18,7 +18,7 @@ import java.io.PrintWriter;
 public class ProfessorCRCreateServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ResponseSetting.ResponseConfig(req, resp);
+        ResponseSetting.responseConfig(req, resp);
 
         JSONObject jsonObject = new JSONObject();
         String token = req.getHeader("Token");

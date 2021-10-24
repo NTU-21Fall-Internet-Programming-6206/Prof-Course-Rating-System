@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class ResponseSetting {
-    public static void ResponseConfig(HttpServletRequest req, HttpServletResponse resp) {
+    public static void responseConfig(HttpServletRequest req, HttpServletResponse resp) {
         resp.setContentType("text/json");
         resp.setHeader("Access-Control-Allow-Origin", req.getHeader("Origin"));
         resp.setHeader("Access-Control-Allow-Methods", "*");

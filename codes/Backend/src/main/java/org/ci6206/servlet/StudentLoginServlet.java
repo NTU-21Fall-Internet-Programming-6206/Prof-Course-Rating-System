@@ -20,7 +20,7 @@ import java.io.PrintWriter;
 public class StudentLoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ResponseSetting.ResponseConfig(req, resp);
+        ResponseSetting.responseConfig(req, resp);
 
         JSONObject msg = JSONUtil.getRequestJson(req);
         if (msg == null) {
