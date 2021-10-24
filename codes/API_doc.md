@@ -377,7 +377,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
             "courseID": "CI6204",
             "professorName": "Alton Chua Yeow Kuan",
             "rating": 4,
-            "username": "chenhaoyu"
+            "username": "userA"
         }
     ]
 }
