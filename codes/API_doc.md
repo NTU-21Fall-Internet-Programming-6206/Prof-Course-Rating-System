@@ -265,7 +265,16 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
  返回示例
 
 ```json
-
+{
+    "professor_cr_list": [
+        {
+            "comment": "Good",
+            "professorName": "Alton Chua Yeow Kuan",
+            "rating": 4,
+            "username": "userA"
+        }
+    ]
+}
 ```
 
  返回参数说明
@@ -346,7 +355,7 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 
 请求 URL：
 
-* `http://34.126.85.190:8080/course-CR`
+* `http://34.126.85.190:8080/course-CR?course_id=CI6204`
 
 请求方式：
 
@@ -361,24 +370,17 @@ DELETE请求，参数体现在url上。所有删除请求用DELETE；
 返回示例：
 
 ```json
-  {
+{
     "course_cr_list": [
-      {
-        "professor_name": "professor_1",
-        "username": "abc123",
-        "course_id": "ci6206",
-        "rate": 3,
-        "comment": "boring"
-      }, 
-      {
-        "professor_name": "professor_2",
-        "username": "jojo123", 
-        "course_id": "ci6208",
-        "rate": 2,
-        "comment": "great"
-      },
+        {
+            "comment": "Good",
+            "courseID": "CI6204",
+            "professorName": "Alton Chua Yeow Kuan",
+            "rating": 4,
+            "username": "chenhaoyu"
+        }
     ]
-  }
+}
 ```
 
 返回参数说明：
