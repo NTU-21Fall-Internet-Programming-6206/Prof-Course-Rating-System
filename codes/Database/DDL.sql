@@ -18,7 +18,7 @@ CREATE TABLE Token (
 );
 
 CREATE TABLE Professors (
-    professor_name VARCHAR(30) NOT NULL, 
+    professor_name VARCHAR(128) NOT NULL, 
     title VARCHAR(20) NOT NULL, 
     email_address VARCHAR(30) NOT NULL,
     PRIMARY KEY (professor_name)
@@ -27,7 +27,7 @@ CREATE TABLE Professors (
 CREATE TABLE Courses (
     course_id VARCHAR(64) NOT NULL, 
     professor_name VARCHAR(30) NOT NULL, 
-    course_name VARCHAR(20) NOT NULL,
+    course_name VARCHAR(256) NOT NULL,
     PRIMARY KEY (course_id), 
     FOREIGN KEY (professor_name) REFERENCES Professors(professor_name)
 );

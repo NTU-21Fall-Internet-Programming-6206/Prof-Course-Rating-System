@@ -28,7 +28,6 @@ public class CourseCRCreateServlet extends HttpServlet {
         resp.setHeader("Access-Control-Allow-Headers", "*");  
         /* 是否携带cookie */
         resp.setHeader("Access-Control-Allow-Credentials", "true");  
-
         String token = req.getHeader("Token");
         try {
             if (!TokenService.checkTokenValid(token)) {
