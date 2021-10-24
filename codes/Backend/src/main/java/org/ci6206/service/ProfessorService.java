@@ -3,7 +3,6 @@ package org.ci6206.service;
 import org.ci6206.dbAPI.ProfessorDBAO;
 import org.ci6206.model.Professor;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProfessorService {
