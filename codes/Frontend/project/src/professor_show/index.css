@@ -1,0 +1,10 @@
+.profShow {
+    width: 100vw;
+    height: 100vh;
+}
+
+.profList {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
