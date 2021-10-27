@@ -22,7 +22,10 @@ Features Completed:
 ### 2.1 Entire Architecture
 
 ### 2.2 Frontend (React, JavaScript, CSS)
-We choose React as the frontend's framework since it is flexible to achieve the designed UI pattern and features. In addition, we choose BrowseRouter to setup the website's route and fetch as the tool to send HTTP requests and receive the responses information. Every webpage we use modular design and each page has its own files directory which is clear and easily distinguished.
+
+1. We choose React as the frontend's framework since it is flexible to achieve the designed UI pattern and features. 
+2. We choose BrowseRouter to setup the website's route and fetch as the tool to send HTTP requests and receive the responses information.
+3. Every webpage we use modular design and each page has its own files directory which is clear and easily distinguished.
 
 ### 2.3 Backend (Servlet)
 To clearly introduce the servlets that we create, we classify these servlets into four groups.
@@ -55,7 +58,9 @@ In summary, all the servlets receive or send the json data that can be parsed by
 ## 4. Setup Guide
 
 ### 4.1 Frontend
-If the users want to setup the localhost website, they could use terminal to go into our project's frontend code's directory. Then they could use command npm start to setup and enter the localhost website. Besides, we use the command npm run build to obtain the frontend's build directory for deploying the website.
+
+1. If the users want to setup the localhost website, they could use terminal to go into our project's frontend code's directory. Then they could use command npm start to setup and enter the localhost website. 
+2. Besides, we use the command npm run build to obtain the frontend's build directory for deploying the website.
 
 ### 4.2 Backend
 In the IDE IntelliJ IDEA, the configuration of Tomcat is the pictures below:
