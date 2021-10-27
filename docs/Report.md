@@ -9,22 +9,13 @@ The Professor & Course Rating System (PCRA) provide a platform where students ca
 The main users of PCRA are Students and Application Administrator (AA).
 
 Features Completed:
-Users could register the account through inputting username, password and email address. And they can use existed username and password to sign in.
-<<<<<<< HEAD
-<img src="/docs/Report_image/login.png" width="50%">
-<!-- ![avatar](/docs/Report_image/login.png)![avatar](/docs/Report_image/register.png) -->
-=======
-![avatar](Report_image/login.png)![avatar](Report_image/register.png)
->>>>>>> 0f0d633a08cacc5fe4e19b436605af4f3300de02
-In addition, users could create course entry through inputting course ID, course name and name of the professor whose entry has been created in the database.
 
-From dashboard page, users could enter the professors and courses list webpages. All professors' entries and courses' entries are listed in separate pages. Users could click each entry to enter that professor or course specific C&R list page.
-
-In the specific prof or course page, users could read all comments and score on that prof or course.
-
-In some of the webpages, there exist NavBar where users could create their own comments and score for that prof or course, go back to dashboard page and log out.
-
-Finally, we restrict the users' accessible webpages. Before login, users only access login, register pages and can't access the other pages via URL. After login, users could access the content pages and can't access login and register via URL.
+1. Users could register the account through inputting username, password and email address. And they can use existed username and password to sign in.
+2. In addition, users could create course entry through inputting course ID, course name and name of the professor whose entry has been created in the database.
+3. From dashboard page, users could enter the professors and courses list webpages. All professors' entries and courses' entries are listed in separate pages. Users could click each entry to enter that professor or course specific C&R list page.
+4. In the specific prof or course page, users could read all comments and score on that prof or course.
+5. In some of the webpages, there exist NavBar where users could create their own comments and score for that prof or course, go back to dashboard page and log out.
+6. Finally, we restrict the users' accessible webpages. Before login, users only access login, register pages and can't access the other pages via URL. After login, users could access the content pages and can't access login and register via URL.
 
 ## 2. Architecture Design
 
