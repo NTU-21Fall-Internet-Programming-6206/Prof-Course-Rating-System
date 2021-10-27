@@ -11,10 +11,18 @@ The main users of PCRA are Students and Application Administrator (AA).
 Features Completed:
 
 1. Users could register the account through inputting username, password and email address. And they can use existed username and password to sign in.
+![](Report_image/register.png)
+![](Report_image/login.png)
 2. In addition, users could create course entry through inputting course ID, course name and name of the professor whose entry has been created in the database.
-3. From dashboard page, users could enter the professors and courses list webpages. All professors' entries and courses' entries are listed in separate pages. Users could click each entry to enter that professor or course specific C&R list page.
-4. In the specific prof or course page, users could read all comments and score on that prof or course.
-5. In some of the webpages, there exist NavBar where users could create their own comments and score for that prof or course, go back to dashboard page and log out.
+![](Report_image/createCourse.png)
+3. From dashboard page, users could enter the professors and courses list webpages. All professors' entries and courses' entries are listed in their own page. Users could click each entry to enter that professor or course specific C&R list page.
+![](Report_image/proflist.png)
+![](Report_image/courselist.png)
+4. In the specific prof or course page, users could read all comments and score on that professor or course.
+![](Report_image/CR.png)
+5. In some of the webpages, there exist NavBar where users could create their own comments and score for that professor or course, go back to dashboard page and log out through clicking the part of the NavBar.
+![](Report_image/navbar.png)
+![](Report_image/crCreate.png)
 6. Finally, we restrict the users' accessible webpages. Before login, users only access login, register pages and can't access the other pages via URL. After login, users could access the content pages and can't access login and register via URL.
 
 ## 2. Architecture Design
@@ -23,9 +31,10 @@ Features Completed:
 
 ### 2.2 Frontend (React, JavaScript, CSS)
 
-1. We choose React as the frontend's framework since it is flexible to achieve the designed UI pattern and features. 
+1. We choose React as the frontend's framework since it is flexible to achieve the designed UI pattern and features.
 2. We choose BrowseRouter to setup the website's route and fetch as the tool to send HTTP requests and receive the responses information.
-3. Every webpage we use modular design and each page has its own files directory which is clear and easily distinguished.
+3. We choose local storage to store the users' login status to restrict their routes' access.
+4. Every webpage we use modular design and each page has its own files directory which is clear and easily distinguished.
 
 ### 2.3 Backend (Servlet)
 To clearly introduce the servlets that we create, we classify these servlets into four groups.
