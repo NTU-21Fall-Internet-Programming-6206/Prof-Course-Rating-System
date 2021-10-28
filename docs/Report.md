@@ -1,7 +1,7 @@
 # Development Report of Professor&Course Rating Application
 
 
-> For better format, please visit the **online page** of this report: https://ntu-21fall-internet-programming-6206.github.io/Professor-Course-Rating-Applicaion/docs/Report
+> For better format, please visit the **online page** of this report: [https://ntu-21fall-internet-programming-6206.github.io/Professor-Course-Rating-Applicaion/docs/Report](https://ntu-21fall-internet-programming-6206.github.io/Professor-Course-Rating-Applicaion/docs/Report)
 
 
 > Our application is deployed to a cloud server and can be visit publicly, please visit: http://34.126.85.190/. Please remember to **disable the cross origin restriction** (a browser's security strategy) of your browser, see the end of [4.3 Deployment & Run in Cloud Server](#43-deployment--run-in-cloud-server) in this report.
@@ -61,7 +61,7 @@ We confirm the RESTful API URL in our API document. Then we use servlet to imple
 
 ### 2.2 Frontend (React, JavaScript, CSS)
 
-Frontend Codes: [../codes/Frontend](../codes/Frontend) 
+Frontend Codes: [codes/Frontend](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/tree/main/codes/Frontend) in the repository.
 
 1. We choose React as the frontend's framework since it is flexible to achieve the designed UI pattern and features.
 2. We choose BrowseRouter to setup the website's route and fetch as the tool to send HTTP requests and receive the responses information.
@@ -70,9 +70,9 @@ Frontend Codes: [../codes/Frontend](../codes/Frontend)
 
 ### 2.3 Backend (Servlet)
 
-The **API document** of our project is [../codes/API_doc.md](../codes/API_doc.md) (which is in Chinese for convenience inside our team). All backend RESTful APIs are developed based on the API document.
+The **API document** of our project is [codes/API_doc.md]([../codes/API_doc.md](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/blob/main/codes/API_doc.md)) (which is in Chinese for convenience inside our team) in the repository. All backend RESTful APIs are developed based on the API document.
 
-Backend Codes [../codes/Backend](../codes/Backend)
+Backend Codes [../codes/Backend]([../codes/Backend](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/tree/main/codes/Backend)) in the repository.
 
 To clearly introduce the servlets that we create, we classify these servlets into four groups.
 
@@ -105,7 +105,7 @@ As this ER diagram show. Please note that the **foreign key constraint** is spec
 ![](../codes/Database/er_diagram.png)
 
 
-Data Defined Language script of Database, which can also be found in [](../codes/Database/DDL.sql)
+Data Defined Language script of Database, which can also be found in [codes/Database/DDL.sql](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/blob/main/codes/Database/DDL.sql)
 
 ```sql
 CREATE DATABASE prof_course_rating_system;
