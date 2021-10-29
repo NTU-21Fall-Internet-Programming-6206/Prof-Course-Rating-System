@@ -70,9 +70,9 @@ Frontend Codes: [codes/Frontend](https://github.com/NTU-21Fall-Internet-Programm
 
 ### 2.3 Backend (Servlet)
 
-The **API document** of our project is [codes/API_doc.md]([../codes/API_doc.md](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/blob/main/codes/API_doc.md)) (which is in Chinese for convenience inside our team) in the repository. All backend RESTful APIs are developed based on the API document.
+The **API document** of our project is [codes/API_doc.md](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/blob/main/codes/API_doc.md) (which is in Chinese for convenience inside our team) in the repository. All backend RESTful APIs are developed based on the API document.
 
-Backend Codes [../codes/Backend]([../codes/Backend](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/tree/main/codes/Backend)) in the repository.
+Backend Codes [../codes/Backend](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/tree/main/codes/Backend) in the repository.
 
 To clearly introduce the servlets that we create, we classify these servlets into four groups.
 
