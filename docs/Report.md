@@ -30,20 +30,17 @@ The main users of PCRA are Students and Application Administrator (AA).
 
 Features Completed:
 
-1. Users could register the account through inputting username, password and email address. And they can use existed username and password to sign in.
-![](Report_image/register.png)
-![](Report_image/login.png)
-2. In addition, users could create course entry through inputting course ID, course name and name of the professor whose entry has been created in the database.
-![](Report_image/createCourse.png)
-3. From dashboard page, users could enter the professors and courses list webpages. All professors' entries and courses' entries are listed in their own page. Users could click each entry to enter that professor or course specific C&R list page.
-![](Report_image/proflist.png)
-![](Report_image/courselist.png)
-4. In the specific prof or course page, users could read all comments and score on that professor or course.
-![](Report_image/CR.png)
-5. In some of the webpages, there exist NavBar where users could create their own comments and score for that professor or course, go back to dashboard page and log out through clicking the part of the NavBar.
-![](Report_image/navbar.png)
-![](Report_image/crCreate.png)
-6. Finally, we restrict the users' accessible webpages. Before login, users only access login, register pages and can't access the other pages via URL. After login, users could access the content pages and can't access login and register via URL.
+1. Users could register the account through inputting username, password and email address. And they can use registered username and password to sign in.
+
+2. In addition, users could create course entry by inputting the course ID, course name and name of the professor whose entry has been created in the database.
+
+3. From the dashboard page, users could enter the professors and courses list webpages. All professors' entries and courses' entries are listed on their own page. Users could click each entry to enter that professor or course-specific C&R list page.
+
+4. On the specific professor or course page, users could read all comments and score on that professor or course.
+
+5. In some of the web pages, there exists NavBar where users could create their comments and score for that professor or course, go back to the dashboard page and log out through clicking the part of the NavBar.
+
+6. Finally, we restrict the users' accessible web pages. Before login, users only access login, register pages and can't access the other pages via URL. After login, users could access the content pages and can't access login and register via URL.
 
 ## 2. Architecture Design
 
@@ -64,7 +61,7 @@ We confirm the RESTful API URL in our API document. Then we use servlet to imple
 Frontend Codes: [codes/Frontend](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/tree/main/codes/Frontend) in the repository.
 
 1. We choose React as the frontend's framework since it is flexible to achieve the designed UI pattern and features.
-2. We choose BrowseRouter to setup the website's route and fetch as the tool to send HTTP requests and receive the responses information.
+2. We choose BrowseRouter to set up the website's route and fetch as the tool to send HTTP requests and receive the responses information.
 3. We choose local storage to store the users' login status to restrict their routes' access.
 4. Every webpage we use modular design and each page has its own files directory which is clear and easily distinguished.
 
@@ -111,7 +108,7 @@ Data Defined Language script of Database, which can also be found in [codes/Data
 
 ### 3.1 Frontend
 
-1. If the users want to setup the localhost website, they could use terminal to go into our project's frontend code's directory. Then they could use command npm start to setup and enter the localhost website. 
+1. If the users want to set up the localhost website, they could use terminal to go into our project's frontend code's directory. Then they could use the command npm start to setup and enter the localhost website. 
 2. Besides, we use the command npm run build to obtain the frontend's build directory for deploying the website.
 
 ### 3.2 Backend
@@ -223,6 +220,6 @@ Then open develop menu and click "Disable Cross-Origin Restriction".
 
 ## 4. Description of Roles
 
-- Chen Haoyu: took charge of Frontend work and UI design. And I also participated in designing the features of the project.
+- Chen Haoyu: Frontend Engineer, UI/UX designer.
 - Lin Jingkun: Backend Engineer. Cloud Server and Cloud Database Applier.
 - Wang Mingye: Team Leader, Architect (Design the whole architect), Backend Engineer (Write SQL APIs and RESTful APIs), Database Administrator (Define and create data tables, check the data in database), Site Reliability Engineer (Deploy both frontend project and backend project to the cloud server).
