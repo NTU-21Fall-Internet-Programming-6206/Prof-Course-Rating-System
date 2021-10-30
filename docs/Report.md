@@ -13,12 +13,12 @@
     - [2.1 Entire Architecture](#21-entire-architecture)
     - [2.2 Frontend (React, JavaScript, CSS)](#22-frontend-react-javascript-css)
     - [2.3 Backend (Servlet)](#23-backend-servlet)
-  - [3. DataBase Design](#3-database-design)
-  - [4. Setup Guide](#4-setup-guide)
-    - [4.1 Frontend](#41-frontend)
-    - [4.2 Backend](#42-backend)
-    - [4.3 Deployment & Run in Cloud Server](#43-deployment--run-in-cloud-server)
-  - [5. Description of Roles](#5-description-of-roles)
+    - [2.4 DataBase Design](#24-database-design)
+  - [3. Setup Guide](#3-setup-guide)
+    - [3.1 Frontend](#31-frontend)
+    - [3.2 Backend](#32-backend)
+    - [3.3 Deployment & Run in Cloud Server](#33-deployment--run-in-cloud-server)
+  - [4. Description of Roles](#4-description-of-roles)
 
 ## 1. Project Scenario
 
@@ -51,7 +51,7 @@ Features Completed:
 
 ![](./Report_image/whole_architecture.png)
 
-The above diagram show our project whole architecture. Our project **does not** integrate the frontend (web page code) into the servlet project. Instead, we divide the frontend and backend clearly, and use RESTful API to connect the frontend and the backend. This mechanism is popular in current internet companies.
+The above diagram show our project whole architecture. Our project **does not** integrate the frontend (web page code) into the servlet project. Instead, we separate the frontend and backend clearly, and use RESTful API to connect the frontend and the backend. This mechanism is popular in current internet companies.
 
 We confirm the RESTful API URL in our API document. Then we use servlet to implement the RESTful APIs, strictly based on API document. And we write the API URLs into our frontend project to make the frontend able to use such APIs. Details are introduced below.
 
@@ -98,7 +98,7 @@ To clearly introduce the servlets that we create, we classify these servlets int
 
 In summary, all the servlets receive or send the json data that can be parsed by the frontend. For inner implementation of the functions, a lower layer called service layer realizes the interactions with the database.
 
-## 3. DataBase Design
+### 2.4 DataBase Design
 
 As this ER diagram show. Please note that the **foreign key constraint** is specifically shown (field to field) in this diagram.
 
@@ -107,76 +107,14 @@ As this ER diagram show. Please note that the **foreign key constraint** is spec
 
 Data Defined Language script of Database, which can also be found in [codes/Database/DDL.sql](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/blob/main/codes/Database/DDL.sql)
 
-```sql
-CREATE DATABASE prof_course_rating_system;
+## 3. Setup Guide
 
-use prof_course_rating_system;
-
-CREATE TABLE Students (
-    username VARCHAR(20) NOT NULL, 
-    email_address VARCHAR(30) NOT NULL,
-    password VARCHAR(64) NOT NULL, 
-    salt VARCHAR(64) NOT NULL, 
-    PRIMARY KEY (username)
-);
-
-CREATE TABLE Token (
-    username VARCHAR(20) NOT NULL, 
-    token VARCHAR(64) NOT NULL, 
-    FOREIGN KEY (username) REFERENCES Students(username), 
-    PRIMARY KEY (token)
-);
-
-CREATE TABLE Professors (
-    professor_name VARCHAR(128) NOT NULL, 
-    title VARCHAR(20) NOT NULL, 
-    email_address VARCHAR(30) NOT NULL,
-    PRIMARY KEY (professor_name)
-);
-
-CREATE TABLE Courses (
-    course_id VARCHAR(64) NOT NULL, 
-    professor_name VARCHAR(30) NOT NULL, 
-    course_name VARCHAR(256) NOT NULL,
-    PRIMARY KEY (course_id), 
-    FOREIGN KEY (professor_name) REFERENCES Professors(professor_name)
-);
-
-
-/* CR's rate range: [1, 5], CR's comment length: <= 1000 words */
-CREATE TABLE CR_on_Professor (
-    auto_id INT NOT NULL AUTO_INCREMENT, 
-    professor_name VARCHAR(30) NOT NULL, 
-    username VARCHAR(20) NOT NULL, 
-    rate INT NOT NULL, 
-    comment VARCHAR(1000), 
-    PRIMARY KEY (auto_id), 
-    FOREIGN KEY (professor_name) REFERENCES Professors(professor_name), 
-    FOREIGN KEY (username) REFERENCES Students(username)
-);
-
-CREATE TABLE CR_on_Course (
-    auto_id INT NOT NULL AUTO_INCREMENT, 
-    professor_name VARCHAR(30) NOT NULL, 
-    username VARCHAR(20) NOT NULL, 
-    course_id VARCHAR(64) NOT NULL, 
-    rate INT NOT NULL, 
-    comment VARCHAR(1000), 
-    PRIMARY KEY (auto_id), 
-    FOREIGN KEY (professor_name) REFERENCES Professors(professor_name), 
-    FOREIGN KEY (username) REFERENCES Students(username), 
-    FOREIGN KEY (course_id) REFERENCES Courses(course_id)
-);
-```
-
-## 4. Setup Guide
-
-### 4.1 Frontend
+### 3.1 Frontend
 
 1. If the users want to setup the localhost website, they could use terminal to go into our project's frontend code's directory. Then they could use command npm start to setup and enter the localhost website. 
 2. Besides, we use the command npm run build to obtain the frontend's build directory for deploying the website.
 
-### 4.2 Backend
+### 3.2 Backend
 In the IDE IntelliJ IDEA, the configuration of Tomcat is the pictures below:
 
 ![](Report_image/tomcat-config.png)
@@ -191,7 +129,7 @@ Thus, the war file is generated in the target directory.
 
 ![](Report_image/backend-war.png)
 
-### 4.3 Deployment & Run in Cloud Server
+### 3.3 Deployment & Run in Cloud Server
 
 Open Terminal on Mac, use `ssh` command to login the google cloud server.
 
@@ -283,7 +221,7 @@ Then open develop menu and click "Disable Cross-Origin Restriction".
 
 ![](./Report_image/disable_cross_origin_restriction.png)
 
-## 5. Description of Roles
+## 4. Description of Roles
 
 - Chen Haoyu: took charge of Frontend work and UI design. And I also participated in designing the features of the project.
 - Lin Jingkun: Backend Engineer. Cloud Server and Cloud Database Applier.
