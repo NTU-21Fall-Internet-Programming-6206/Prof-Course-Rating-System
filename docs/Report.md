@@ -4,7 +4,7 @@
 > For better format, please visit the **online page** of this report: [https://ntu-21fall-internet-programming-6206.github.io/Professor-Course-Rating-Applicaion/docs/Report](https://ntu-21fall-internet-programming-6206.github.io/Professor-Course-Rating-Applicaion/docs/Report)
 
 
-> Our application is deployed to a cloud server and can be visit publicly, please visit: [http://34.126.85.190/](http://34.126.85.190/). Please remember to **disable the cross origin restriction** (a browser's security strategy) of your browser, see the end of [4.3 Deployment & Run in Cloud Server](#43-deployment--run-in-cloud-server) in this report.
+> Our application is deployed to a cloud server and can be visit publicly, please visit: [http://34.126.85.190/](http://34.126.85.190/). Please remember to **disable the cross origin restriction** (a browser's security strategy) of your browser, see the end of [3.3 Deployment & Run in Cloud Server](#33-deployment--run-in-cloud-server) in this report.
 
 
 - [Development Report of Professor&Course Rating Application](#development-report-of-professorcourse-rating-application)
