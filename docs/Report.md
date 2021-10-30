@@ -66,15 +66,15 @@ The **API document** of our project is [codes/API_doc.md](https://github.com/NTU
 
 Backend Codes [codes/Backend](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/tree/main/codes/Backend) in the repository.
 
-To clearly introduce the servlets that we create, we classify these servlets into four groups.
+Here introduces the servlets that we create:
 
 1. Student
    
-   As for student users, the route registration includes student registration and login. Thus, we write two servlets for them respectively. Both `StudentRegisterServlet` and `StudentLoginServlet` are implemented by overwritten the `doPost` method derived from the class `HttpServlet`.
+   As for student users, the route registration includes student registration and login so there are two servlet classes. 
 
-   In `StudentRegisterServlet`, we acquire the username and the password of a new user, and then allocate a token for she/he to attain the authentication to use the functions in the login mode. Before we write the username and the password into the database, the password is encrypted by the MD5 algorithm with a salt value generated from a random UUID, which protects the security of the secret information. After successfully registering a user, `StudentRegisterServlet` sends the response to the client, whose content includes a json `{"info": "Success"}`, otherwise the value of `info` will be `Failed`.
+   `StudentRegisterServlet` acquires the username and the password of a new user, and then allocate a token for she/he to attain the authentication to use the functions in the login mode. Password is protected by salted mechanism.
 
-   In `StudentLoginServlet`, the process is similar to that of `StudentRegisterServlet`, but `StudentLoginServlet` only tries to check whether the information sent from the client is correct. If the information matches that in the database, the body of the response includes successful login information.
+   `StudentLoginServlet` tries to check whether the information sent from the client is correct. 
 
 2. Professor
    
@@ -88,7 +88,7 @@ To clearly introduce the servlets that we create, we classify these servlets int
 
    In these two parts, we implement the create and the query servlets. `CourseCRCreateServlet` and `ProfessorCRCreateServlet` are used for create a comment and a rating for a course or a professor. And the query servlets are for acquire the list of CourseCR and ProfessorCR.
 
-In summary, all the servlets receive or send the json data that can be parsed by the frontend. For inner implementation of the functions, a lower layer called service layer realizes the interactions with the database.
+All the servlets receive or send the json data that can be parsed by the frontend. And the servlets call database API to implement the function.
 
 ### 2.4 DataBase Design
 
@@ -170,26 +170,18 @@ Here is the nginx config content after modification.
 server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
-
 	root /var/www/html/build;
-
 	index index.html index.htm index.nginx-debian.html;
-
 	server_name _;
-
 	location / {
 		try_files $uri $uri/ @router;
 	}
-
     location @router {
         rewrite ^.*$ /index.html last;
     }
-
     location /api/{
         proxy_pass http://34.126.85.190:8080/;
-    }
-
-	
+    }	
 }
 ```
 
