@@ -24,15 +24,14 @@
 
 At the beginning of every semester, NTU students need to register courses that they want to take. Usually, the deadline of the course registration is the end of week 2. To decide whether to take a course, students can read the course’s syllabus, and experience the classes in the first two weeks. However, these may be not enough for students to make a good decision. To know about the professor and his/her course more clearly, additional information from those who have taken the course will be helpful.
 
-The Professor & Course Rating System (PCRA) provide a platform where students can publish their comments and rates on a specific professor and his/her course anonymously. Students can also search the professor or the course by name to browse the comments and rates on the professor or the course. All comments and rates are shown anonymously.
+The Professor & Course Rating System (PCRA) provide a platform where students can publish their comments and rates (C&R) on a specific professor and his/her course anonymously. Students can also browse the comments and rates on the professor or the course. 
 
 Features Completed:
-1. Users could register the account through inputting username, password and email address. And they can use registered username and password to sign in.
-2. In addition, users could create course entry by inputting the course ID, course name and name of the professor whose entry has been created in the database.
-3. From the dashboard page, users could enter the professors and courses list webpages. All professors' entries and courses' entries are listed on their own page. Users could click each entry to enter that professor or course-specific C&R list page.
-4. On the specific professor or course page, users could read all comments and score on that professor or course.
-5. In some of the web pages, there exists NavBar where users could create their comments and score for that professor or course, go back to the dashboard page and log out through clicking the part of the NavBar.
-6. Finally, we restrict the users' accessible web pages. Before login, users only access login, register pages and can't access the other pages via URL. After login, users could access the content pages and can't access login and register via URL.
+1. User Register & Login.
+2. User Creating Course Entry.
+3. Professors List & Courses List, where users could click an entry to access the C&R of that entry.
+4. Users can give their C&R for a professor or a course. Their C&R will be shown website publicly.
+
 
 ## 2. Architecture Design
 
@@ -100,8 +99,8 @@ Data Defined Language script of Database, which can also be found in [codes/Data
 
 ### 3.1 Frontend
 
-1. If the users want to set up the localhost website, they could use terminal to go into our project's frontend code's directory. Then they could use the command npm start to setup and enter the localhost website. 
-2. Besides, we use the command npm run build to obtain the frontend's build directory for deploying the website.
+1. Run the command `npm start` in our project's frontend code's directory to setup and enter the localhost website. 
+2. Run the command `npm run build` to obtain the frontend's build directory for deploying the website on server.
 
 ### 3.2 Backend
 In the IDE IntelliJ IDEA, the configuration of Tomcat is the pictures below:
