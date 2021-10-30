@@ -24,22 +24,17 @@
 
 At the beginning of every semester, NTU students need to register courses that they want to take. Usually, the deadline of the course registration is the end of week 2. To decide whether to take a course, students can read the course’s syllabus, and experience the classes in the first two weeks. However, these may be not enough for students to make a good decision. To know about the professor and his/her course more clearly, additional information from those who have taken the course will be helpful.
 
-The Professor & Course Rating System (PCRA) provide a platform where students can publish their comments and rates on a specific professor and his/her course anonymously. Students can also search the professor or the course by name to browse the comments and rates on the professor or the course. All comments and rates are shown anonymously but students can still change or delete their previous comments and rates.
+The Professor & Course Rating System (PCRA) provide a platform where students can publish their comments and rates on a specific professor and his/her course anonymously. Students can also search the professor or the course by name to browse the comments and rates on the professor or the course. All comments and rates are shown anonymously.
 
 The main users of PCRA are Students and Application Administrator (AA).
 
 Features Completed:
 
 1. Users could register the account through inputting username, password and email address. And they can use registered username and password to sign in.
-
 2. In addition, users could create course entry by inputting the course ID, course name and name of the professor whose entry has been created in the database.
-
 3. From the dashboard page, users could enter the professors and courses list webpages. All professors' entries and courses' entries are listed on their own page. Users could click each entry to enter that professor or course-specific C&R list page.
-
 4. On the specific professor or course page, users could read all comments and score on that professor or course.
-
 5. In some of the web pages, there exists NavBar where users could create their comments and score for that professor or course, go back to the dashboard page and log out through clicking the part of the NavBar.
-
 6. Finally, we restrict the users' accessible web pages. Before login, users only access login, register pages and can't access the other pages via URL. After login, users could access the content pages and can't access login and register via URL.
 
 ## 2. Architecture Design
@@ -74,7 +69,7 @@ Backend Codes [codes/Backend](https://github.com/NTU-21Fall-Internet-Programming
 To clearly introduce the servlets that we create, we classify these servlets into four groups.
 
 1. Student
-
+   
    As for student users, the route registration includes student registration and login. Thus, we write two servlets for them respectively. Both `StudentRegisterServlet` and `StudentLoginServlet` are implemented by overwritten the `doPost` method derived from the class `HttpServlet`.
 
    In `StudentRegisterServlet`, we acquire the username and the password of a new user, and then allocate a token for she/he to attain the authentication to use the functions in the login mode. Before we write the username and the password into the database, the password is encrypted by the MD5 algorithm with a salt value generated from a random UUID, which protects the security of the secret information. After successfully registering a user, `StudentRegisterServlet` sends the response to the client, whose content includes a json `{"info": "Success"}`, otherwise the value of `info` will be `Failed`.
@@ -82,7 +77,7 @@ To clearly introduce the servlets that we create, we classify these servlets int
    In `StudentLoginServlet`, the process is similar to that of `StudentRegisterServlet`, but `StudentLoginServlet` only tries to check whether the information sent from the client is correct. If the information matches that in the database, the body of the response includes successful login information.
 
 2. Professor
-
+   
    In professor part, we register the route `/professor` such that the login user can query the professor list or an indicated professor. 
    
 3. Course
@@ -113,8 +108,6 @@ Data Defined Language script of Database, which can also be found in [codes/Data
 
 ### 3.2 Backend
 In the IDE IntelliJ IDEA, the configuration of Tomcat is the pictures below:
-
-![](Report_image/tomcat-config.png)
 
 ![](Report_image/tomcat-config1.png)
 
@@ -216,7 +209,6 @@ Take Safari as an example. First open Safari-Preferences-Advanced. Enable the "S
 
 Then open develop menu and click "Disable Cross-Origin Restriction".
 
-![](./Report_image/disable_cross_origin_restriction.png)
 
 ## 4. Description of Roles
 
