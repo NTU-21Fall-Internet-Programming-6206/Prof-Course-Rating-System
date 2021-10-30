@@ -31,18 +31,15 @@ The main users of PCRA are Students and Application Administrator (AA).
 Features Completed:
 
 1. Users could register the account through inputting username, password and email address. And they can use registered username and password to sign in.
-![](Report_image/register.png)
-![](Report_image/login.png)
+
 2. In addition, users could create course entry by inputting the course ID, course name and name of the professor whose entry has been created in the database.
-![](Report_image/createCourse.png)
+
 3. From the dashboard page, users could enter the professors and courses list webpages. All professors' entries and courses' entries are listed on their own page. Users could click each entry to enter that professor or course-specific C&R list page.
-![](Report_image/proflist.png)
-![](Report_image/courselist.png)
+
 4. On the specific professor or course page, users could read all comments and score on that professor or course.
-![](Report_image/CR.png)
+
 5. In some of the web pages, there exists NavBar where users could create their comments and score for that professor or course, go back to the dashboard page and log out through clicking the part of the NavBar.
-![](Report_image/navbar.png)
-![](Report_image/crCreate.png)
+
 6. Finally, we restrict the users' accessible web pages. Before login, users only access login, register pages and can't access the other pages via URL. After login, users could access the content pages and can't access login and register via URL.
 
 ## 2. Architecture Design
