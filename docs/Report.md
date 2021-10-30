@@ -11,7 +11,7 @@
   - [1. Project Scenario](#1-project-scenario)
   - [2. Architecture Design](#2-architecture-design)
     - [2.1 Entire Architecture](#21-entire-architecture)
-    - [2.4 DataBase Design](#24-database-design)
+    - [2.2 DataBase Design](#22-database-design)
   - [3. Setup Guide](#3-setup-guide)
     - [3.1 Frontend](#31-frontend)
     - [3.2 Backend](#32-backend)
@@ -37,7 +37,7 @@ Features Completed:
 
 The above diagram show our project whole architecture. Our project **does not** integrate the frontend (web page code) into the servlet project. Instead, we separate the frontend and backend clearly, and use RESTful API to connect the frontend and the backend. This mechanism is popular in current internet companies.
 
-We confirm the RESTful API URL in our API document. Then we use servlet to implement the RESTful APIs, strictly based on API document. And we write the API URLs into our frontend project to make the frontend able to use such APIs. Details are introduced below.
+We confirm the RESTful API URL in our API document. Then we use servlet to implement the RESTful APIs, strictly based on API document. And we write the API URLs into our frontend project to make the frontend able to use such APIs. 
 
 **For Security and Authentication**: 
 1. We use salted mechanism to protect password.
@@ -51,7 +51,7 @@ The **API document** of our project is [codes/API_doc.md](https://github.com/NTU
 Backend Codes [codes/Backend](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/tree/main/codes/Backend) in the repository.
 
 
-### 2.4 DataBase Design
+### 2.2 DataBase Design
 
 As this ER diagram show. Please note that the **foreign key constraint** is specifically shown (field to field) in this diagram. Data Defined Language script of Database, which can also be found in [codes/Database/DDL.sql](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/blob/main/codes/Database/DDL.sql)
 
@@ -88,35 +88,20 @@ tar -xzvf apache-tomcat-9.0.54.tar.gz
 
 Use `scp` command or use FTP tool such as Filezilla on Mac to upload backend's war file to Tomcat's webapps directory (apache-tomcat-9.0.54/webapps). And rename the war file to "ROOT.war", because Tomcat will automatically set "ROOT.war" as the root web app and users can access such a root web app without enter any suffix after server's IP & port. 
 
-After putting the war file to apache-tomcat-9.0.54/webapps, enter apache-tomcat-9.0.54/bin. Run the script startup.sh `bash startup.sh` to start the Tomcat.
-
-Now, the backend is running. Our project's backend is running at [http://34.126.85.190:8080](http://34.126.85.190:8080).
+Then enter apache-tomcat-9.0.54/bin. Run the script startup.sh `bash startup.sh` to start the Tomcat. Now, the backend is running. Our project's backend is running at [http://34.126.85.190:8080](http://34.126.85.190:8080).
 
 
 Then deploy the frontend project to the server.
 
-Install nginx, npm and node.js on  the server.
+First, install nginx `sudo apt install npm` on the server. Then upload frontend's build folder to server's /var/www/html directory. 
 
-```shell
-sudo apt install nginx
-sudo apt install npm
-sudo apt install nodejs
-```
+Use `vim` command `vim /etc/nginx/sites-enabled/default` to modify the config of nginx, as [codes/niginx_config.conf](https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/blob/main/codes/niginx_config.conf) in the repository. 
 
-Use `scp` command or use FTP tool such as Filezilla on Mac to upload frontend's build folder to server's /var/www/html directory. 
-
-Use `vim` command `vim /etc/nginx/sites-enabled/default` to modify the config of nginx, as [codes/niginx_config.conf]() in the repository. 
-
-Then restart nginx service `service nginx restart` to make the new config work.
-
-Now our website run at server's 80 port. User can directly enter the URL [http://34.126.85.190](http://34.126.85.190) to the browser to visit our website.
+Then restart nginx service `service nginx restart` to make the new config work. Now our website run at server's 80 port. User can directly use the URL [http://34.126.85.190](http://34.126.85.190) to visit our website.
 
 To normally use the website, user should disable the **cross origin restriction** (a browser's security strategy) of the browser. 
 
-Take Safari as an example. First open Safari-Preferences-Advanced. Enable the "Show Develop menu in menu bar" option. 
-
-Then open develop menu and click "Disable Cross-Origin Restriction".
-
+Take Safari as an example. First open Safari-Preferences-Advanced. Enable the "Show Develop menu in menu bar" option. Then open develop menu and click "Disable Cross-Origin Restriction".
 
 ## 4. Description of Roles
 
