@@ -26,10 +26,7 @@ At the beginning of every semester, NTU students need to register courses that t
 
 The Professor & Course Rating System (PCRA) provide a platform where students can publish their comments and rates on a specific professor and his/her course anonymously. Students can also search the professor or the course by name to browse the comments and rates on the professor or the course. All comments and rates are shown anonymously.
 
-The main users of PCRA are Students and Application Administrator (AA).
-
 Features Completed:
-
 1. Users could register the account through inputting username, password and email address. And they can use registered username and password to sign in.
 2. In addition, users could create course entry by inputting the course ID, course name and name of the professor whose entry has been created in the database.
 3. From the dashboard page, users could enter the professors and courses list webpages. All professors' entries and courses' entries are listed on their own page. Users could click each entry to enter that professor or course-specific C&R list page.
@@ -121,12 +118,7 @@ Thus, the war file is generated in the target directory.
 
 ### 3.3 Deployment & Run in Cloud Server
 
-Open Terminal on Mac, use `ssh` command to login the google cloud server.
-
-```shell
-ssh root@34.126.85.190
-# Then Enter the Password of root.
-```
+Open Terminal on Mac, use `ssh` command `ssh root@34.126.85.190` to login the google cloud server.
 
 On server, Use `wget` to download Tomcat 9.0.54 and  decompress the tar file.
 
@@ -137,11 +129,7 @@ tar -xzvf apache-tomcat-9.0.54.tar.gz
 
 Use `scp` command or use FTP tool such as Filezilla on Mac to upload backend's war file to Tomcat's webapps directory (apache-tomcat-9.0.54/webapps). And rename the war file to "ROOT.war", because Tomcat will automatically set "ROOT.war" as the root web app and users can access such a root web app without enter any suffix after server's IP & port. 
 
-After putting the war file to apache-tomcat-9.0.54/webapps, enter apache-tomcat-9.0.54/bin. Run the script startup.sh to start the Tomcat.
-
-```
-bash startup.sh
-```
+After putting the war file to apache-tomcat-9.0.54/webapps, enter apache-tomcat-9.0.54/bin. Run the script startup.sh `bash startup.sh` to start the Tomcat.
 
 Now, the backend is running. Our project's backend is running at [http://34.126.85.190:8080](http://34.126.85.190:8080).
 
@@ -158,11 +146,7 @@ sudo apt install nodejs
 
 Use `scp` command or use FTP tool such as Filezilla on Mac to upload frontend's build folder to server's /var/www/html directory. 
 
-Use `vim` to modify the config of nginx. 
-
-```shell
-vim /etc/nginx/sites-enabled/default
-```
+Use `vim` command `vim /etc/nginx/sites-enabled/default` to modify the config of nginx. 
 
 Here is the nginx config content after modification.
 
@@ -185,11 +169,7 @@ server {
 }
 ```
 
-Then restart nginx service to make the new config work.
-
-```shell
-service nginx restart
-```
+Then restart nginx service `service nginx restart` to make the new config work.
 
 Now our website run at server's 80 port. User can directly enter the URL [http://34.126.85.190](http://34.126.85.190) to the browser to visit our website.
 
