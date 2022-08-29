@@ -5,6 +5,10 @@ Wang Mingye, Lin Jingkun, Chen Haoyu
 
 All group members are Chinese. For Better Reading, docs for internal reading will be in Chinese.
 
+- English Report of this Project: https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/blob/main/docs/Report.md
+
+(pdf version: https://github.com/NTU-21Fall-Internet-Programming-6206/Professor-Course-Rating-Applicaion/blob/main/docs/Report.pdf)
+
 
 - [Professor-Course-Rating-Application](#professor-course-rating-application)
   - [目录结构说明](#目录结构说明)
